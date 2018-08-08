@@ -42,7 +42,7 @@ twitter:            SaeedTaghaviV
 facebook:           saeedtaghavi
 github-url:         SaeedTaghavi
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
+linkedin:          www.linkedin.com/in/saeed-taghavi-a16488130
 #xing:              username
 #instagram:          username
 #lastfm:            username
@@ -61,7 +61,7 @@ github-url:         SaeedTaghavi
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-
+reseachgate:        Saeed_Taghavi
 # Gems
 gems:
   - jekyll-mentions
