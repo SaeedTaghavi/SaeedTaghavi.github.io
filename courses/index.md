@@ -1,6 +1,6 @@
 ---
-layout: project
-title: All Projects
-excerpt: "A List of Projects"
+layout: courses
+title: All Courses
+excerpt: "A List of courses"
 comments: false
 ---
