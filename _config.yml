@@ -1,7 +1,6 @@
 # Site
 title:              Saeed Taghavi
-bio:                ' I am a Computational Physicist, studying Neuroscience and Information Theory, also a junior web developer
-                      and this is my github page.'
+bio:                ' I am a Computational Physicist, studying Neuroscience and Information Theory, also a junior web developer.'
 description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
 words_per_minute:   200
