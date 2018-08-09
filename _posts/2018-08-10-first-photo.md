@@ -21,7 +21,10 @@ some thing is un clear to me, how can I use those different categories
  to organize my posts, should I create different directories, or just 
   set tru in the heading of each post's md file!!!
   
-  ![Image of Me](stv01.jpg)
+<figure>
+<a href="stv01.jpg"><img src="stv01.jpg"></a>
+<figcaption><a href="stv01.jpg">a photo of me</a>.</figcaption>
+</figure>
 
   
   

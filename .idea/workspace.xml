@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1971e5cf-322b-4a8e-80a2-d0d6ef2bd6df" name="Default" comment="" />
+    <list default="true" id="1971e5cf-322b-4a8e-80a2-d0d6ef2bd6df" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-08-10-first-photo.md" afterPath="$PROJECT_DIR$/_posts/2018-08-10-first-photo.md" />
+    </list>
     <ignored path="saeedtaghavi.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,9 +26,22 @@
       <file leaf-file-name="2018-08-10-first-photo.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-10-first-photo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="479">
-                <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="454">
+                <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2013-05-22-sample-post-images.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2013-05-22-sample-post-images.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="75">
+                <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="9" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -254,12 +269,12 @@
       <updated>1533739539321</updated>
       <workItem from="1533739540811" duration="2380000" />
       <workItem from="1533761765709" duration="12136000" />
-      <workItem from="1533856138574" duration="1954000" />
+      <workItem from="1533856138574" duration="2550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16470000" />
+    <option name="totallyTimeSpent" value="17066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -607,9 +622,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-05-22-sample-post-images.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="25">
-            <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="75">
+            <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="9" />
             <folding />
           </first_editor>
           <second_editor />
@@ -618,9 +633,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-08-10-first-photo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="479">
-            <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="454">
+            <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             <folding />
           </first_editor>
           <second_editor />
