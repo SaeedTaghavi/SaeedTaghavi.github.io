@@ -1,6 +1,6 @@
 ---
 layout: courses
-title: All Courses
+title: All Photos
 excerpt: "A List of photos"
 comments: false
 ---
