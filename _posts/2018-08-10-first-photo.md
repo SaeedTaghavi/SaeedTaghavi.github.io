@@ -23,7 +23,7 @@ some thing is un clear to me, how can I use those different categories
   
 
 <figure>
-	<a href="http://placehold.it/1200x600.jpeg"><img src="http://placehold.it/600x300.jpg"></a>
+	<a href="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io/blob/master/_posts/stv01.jpg"><img src="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io/blob/master/_posts/stv01.jpg"></a>
 	<figcaption>One images.</figcaption>
 </figure>
 
