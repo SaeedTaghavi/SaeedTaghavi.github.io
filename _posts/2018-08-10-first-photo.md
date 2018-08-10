@@ -29,7 +29,7 @@ some thing is un clear to me, how can I use those different categories
 
 
 <figure> 
-	<img src="https://github.com/SaeedTaghavi/myPic/blob/master/msc-thesis.JPG">
+	<img src="https://github.com/SaeedTaghavi/myPic/blob/master/msc-thesis.JPG?raw=true">
 	<figcaption>Me</figcaption>
 </figure>
 
