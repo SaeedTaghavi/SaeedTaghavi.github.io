@@ -23,7 +23,7 @@ some thing is un clear to me, how can I use those different categories
   
 
 <figure>
-	<a href="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io/blob/master/_posts/stv01.jpg"><img src="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io/blob/master/_posts/stv01.jpg"></a>
+	<a href="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></a>
 	<figcaption>One images.</figcaption>
 </figure>
 
