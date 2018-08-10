@@ -22,12 +22,16 @@ some thing is un clear to me, how can I use those different categories
   set tru in the heading of each post's md file!!!
   
 
-<figure class="half">
-	<p>this is just to test how a paragraph of text will treat by the side of an image.</p> 
+<figure> 
 	<img src="https://github.com/SaeedTaghavi/FourierTransform/blob/master/FourierTransform/frequencies.png?raw=true">
 	<figcaption>One images.</figcaption>
 </figure>
 
+
+<figure> 
+	<img src="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io.old/blob/master/myPic/stv01.jpg">
+	<figcaption>Me</figcaption>
+</figure>
 
   
   
