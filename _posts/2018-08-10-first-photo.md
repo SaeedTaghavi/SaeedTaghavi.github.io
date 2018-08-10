@@ -23,7 +23,7 @@ some thing is un clear to me, how can I use those different categories
   
 
 <figure class="half">
-	this is just to test how a paragraph of text will treat by the side of an image. 
+	<p>this is just to test how a paragraph of text will treat by the side of an image.</p> 
 	<img src="https://github.com/SaeedTaghavi/FourierTransform/blob/master/FourierTransform/frequencies.png?raw=true">
 	<figcaption>One images.</figcaption>
 </figure>
