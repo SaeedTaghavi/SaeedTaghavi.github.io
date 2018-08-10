@@ -22,7 +22,7 @@ some thing is un clear to me, how can I use those different categories
   set tru in the heading of each post's md file!!!
   
 <figure>
-<a href="stv01.jpg"><img src="stv01.jpg"></a>
+<a href="stv01.jpg"><img src="./stv01.jpg"></a>
 <figcaption><a href="stv01.jpg">a photo of me</a>.</figcaption>
 </figure>
 
