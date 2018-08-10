@@ -33,5 +33,8 @@ some thing is un clear to me, how can I use those different categories
 	<figcaption>Me</figcaption>
 </figure>
 
-  
+<figure> 
+	<img src="https://github.com/SaeedTaghavi/SaeedTaghavi.github.io/blob/master/_posts/stv01.jpg?raw=true">
+	<figcaption>Me</figcaption>
+</figure>  
   
