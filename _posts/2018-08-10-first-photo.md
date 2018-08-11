@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My First Post"
+title:  "My First Photo"
 date:   2018-08-10
 excerpt: "Minimal, one column Jekyll theme for your blog."
 photos: true
