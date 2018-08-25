@@ -23,6 +23,8 @@ comments: true
 و با درست کردن اون الان هم عنوان فارسی دارم هم تگ فارسی. اینجوری خیلی خوبه و خیل کمک می کنه به سازماندهی نوشته ها. 
 :)
 
+
 الان حتی زاست به چپ نوشتن رو هم چک کردم تا مطمئن بشم درست کار می کنه
 
 </div>
+this is a small English text to check how English and Persian text will appear together.
