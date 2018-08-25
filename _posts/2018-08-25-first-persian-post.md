@@ -1,18 +1,19 @@
 ---
 layout: post
-title:  "My First Persian Post"
+title:  "اولین پست فارسی من"
 date:   2018-08-25
-excerpt: "this is just to test Persian content here."
-excerpt: "Minimal, one column Jekyll theme for your blog."
+excerpt: "فقط برای اینکه فارسی نوشتن در اینجا را آزمایش کنم"
 tag:
 - jekyll 
 - moon
 - blog
 - organizing_posts
-- Persianersian
+- Persian
+- فارسی
 comments: true
 ---
 
 
 دوباره برای پست فارسی آزمایش می کنم، امیدوارم که درست بشه!
+
 Persian post did  not work here! :(
