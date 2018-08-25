@@ -13,4 +13,6 @@ tag:
 comments: true
 ---
 
+
+دوباره برای پست فارسی آزمایش می کنم، امیدوارم که درست بشه!
 Persian post did  not work here! :(
