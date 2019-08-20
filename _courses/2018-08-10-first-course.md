@@ -3,6 +3,7 @@ layout: post
 title:  "My First course"
 date:   2018-08-10
 excerpt: "Minimal, one column Jekyll theme for your blog."
+courses: true
 tag:
 - jekyll 
 - moon
