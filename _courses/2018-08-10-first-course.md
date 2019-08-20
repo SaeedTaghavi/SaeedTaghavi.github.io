@@ -9,7 +9,7 @@ tag:
 - moon
 - blog
 - organizing_posts
-comments: true
+comments: false
 ---
 
 This is my first post in the courses category,
