@@ -1,15 +1,15 @@
 ---
-layout: post
-title:  "My First Photo"
-date:   2018-08-10
-excerpt: "Minimal, one column Jekyll theme for your blog."
-photos: true
-tag:
-- jekyll 
+title: My First Photo
+date: 2018-08-10 00:00:00 Z
+tags:
+- jekyll
 - moon
 - blog
 - organizing_posts
 - photos
+layout: post
+excerpt: Minimal, one column Jekyll theme for your blog.
+photos: true
 comments: true
 ---
 

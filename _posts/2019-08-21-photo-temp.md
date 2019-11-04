@@ -1,12 +1,12 @@
 ---
-layout: post
-title:  "template Photo"
-date:   2019-08-21
-excerpt: "Minimal, one column Jekyll theme for your photo."
-photos: true
-tag:
+title: template Photo
+date: 2019-08-21 00:00:00 Z
+tags:
 - blog
 - photos
+layout: post
+excerpt: Minimal, one column Jekyll theme for your photo.
+photos: true
 comments: true
 ---
 

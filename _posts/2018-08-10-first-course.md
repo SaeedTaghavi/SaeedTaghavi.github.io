@@ -1,14 +1,14 @@
 ---
-layout: post
-title:  "My First course"
-date:   2018-08-10
-excerpt: "Minimal, one column Jekyll theme for your blog."
-courses: true
-tag:
-- jekyll 
+title: My First course
+date: 2018-08-10 00:00:00 Z
+tags:
+- jekyll
 - moon
 - blog
 - organizing_posts
+layout: post
+excerpt: Minimal, one column Jekyll theme for your blog.
+courses: true
 comments: true
 ---
 

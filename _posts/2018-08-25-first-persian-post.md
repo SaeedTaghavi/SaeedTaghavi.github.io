@@ -1,15 +1,15 @@
 ---
-layout: post
-title:  "اولین پست فارسی من"
-date:   2018-08-25
-excerpt: "فقط برای اینکه فارسی نوشتن در اینجا را آزمایش کنم"
-tag:
-- jekyll 
+title: اولین پست فارسی من
+date: 2018-08-25 00:00:00 Z
+tags:
+- jekyll
 - moon
 - blog
 - organizing_posts
 - Persian
 - فارسی
+layout: post
+excerpt: فقط برای اینکه فارسی نوشتن در اینجا را آزمایش کنم
 comments: true
 ---
 

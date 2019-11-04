@@ -1,11 +1,11 @@
 ---
-layout: post
-title:  "desynchronization of kuramoto rotators"
-date:   2019-08-20
-excerpt: "desynchronization of kuramoto rotators"
-project: true
-tag:
+title: desynchronization of kuramoto rotators
+date: 2019-08-20 00:00:00 Z
+tags:
 - blog
+layout: post
+excerpt: desynchronization of kuramoto rotators
+project: true
 comments: true
 ---
 

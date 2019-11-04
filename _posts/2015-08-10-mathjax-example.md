@@ -1,14 +1,14 @@
 ---
-layout: post
-title:  "MathJax Example"
-date:   2015-08-10
-excerpt: "MathJax Example for Moon Jekyll Theme."
-tag:
-- markdown 
+title: MathJax Example
+date: 2015-08-10 00:00:00 Z
+tags:
+- markdown
 - mathjax
 - example
 - test
 - jekyll
+layout: post
+excerpt: MathJax Example for Moon Jekyll Theme.
 comments: true
 ---
 

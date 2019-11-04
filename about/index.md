@@ -1,11 +1,15 @@
 ---
-layout: page
 title: About Me
-tags: [about, Jekyll, theme, moon]
-date: 2019-08-21
+date: 2019-08-21 00:00:00 Z
+layout: page
+tags:
+- about
+- Jekyll
+- theme
+- moon
 comments: false
 ---
-    
+
 <center> My name is <b>Saeed Taghavi</b>, I am a PhD student of Physics (Complex Systems) at the  <a href="https://iasbs.ac.ir/">Institute for Advanced Studies in basic Sciences</a>, Zanjan, Iran.</center>
 
 

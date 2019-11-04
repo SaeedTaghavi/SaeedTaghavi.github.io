@@ -1,77 +1,61 @@
-# Site
-title:              Saeed Taghavi
-bio:                'I am a Computational Physicist, studying Neuroscience and Information Theory, a former astronomer, and also a junior web developer.'
-description:        "PhD student of Complex Systems, Department of Physics, Institute for Advanced Studies in Basic Sciences (IASBS)."
-reading_time:       true
-words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             en_US
-url:                https://saeedtaghavi.github.io/
-
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
+---
+title: Saeed Taghavi
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+bio: I am a Computational Physicist, studying Neuroscience and Information Theory,
+  a former astronomer, and also a junior web developer.
+description: PhD student of Complex Systems, Department of Physics, Institute for
+  Advanced Studies in Basic Sciences (IASBS).
+reading_time: true
+words_per_minute: 200
+logo: assets/img/logo.png
+background: assets/img/placeholder-big.jpg
+tiled_bg: false
+locale: en_US
+url: https://saeedtaghavi.github.io/
+permalink: "/:title/"
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+mathjax: true
 sass:
-  sass_dir:         _sass
-  style:            compressed
-
-# Comments
-disqus_shortname:   taylantatli
-
-# Social
-# if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
-email:              saeed.taghavi.v@gmail.com
-twitter:            SaeedTaghaviV
-facebook:           saeed.taghavi.90
-github-url:         SaeedTaghavi
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-stackoverflow:     9853857/saeedtaghavi
-linkedin:          saeed-taghavi-a16488130
-#xing:              username
-#instagram:          username
-#lastfm:            username
-#tumblr:            username
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-#steam:              username
-#dribbble:          username
-#youtube:           username
-#youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
-
-# Gems
+  sass_dir: _sass
+  style: compressed
+disqus_shortname: taylantatli
+email: saeed.taghavi.v@gmail.com
+twitter: SaeedTaghaviV
+facebook: saeed.taghavi.90
+github-url: SaeedTaghavi
+stackoverflow: 9853857/saeedtaghavi
+linkedin: saeed-taghavi-a16488130
 gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-
+- jekyll-mentions
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-gist
 jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+  base_url: https://github.com
+exclude:
+- README.md
+- Gemfile
+- Gemfile.lock
+- node_modules
+- gulpfile.js
+- package.json
+- _site
+- src
+- vendor
+- CNAME
+- LICENSE
+- Rakefile
