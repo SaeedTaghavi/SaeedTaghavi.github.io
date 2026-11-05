@@ -3,7 +3,7 @@ hooks/writing.py
 
 Motivation
 ----------
-The Writing list, overrides/partials/post.html, shows each post's title and
+The Blog list, overrides/partials/post.html, shows each post's title and
 cover picture. Material's excerpts only learn the title once the post has
 been rendered, which can be after the list, and the blog plugin moves images
 out of writing/posts/, so a fixed path to a cover breaks. This hook gives the

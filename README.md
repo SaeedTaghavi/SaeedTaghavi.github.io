@@ -2,7 +2,7 @@
 
 Personal site built with [MkDocs](https://www.mkdocs.org/) and
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/): site
-search, a blog under **Writing**, and data files for everything that repeats.
+search, a **Blog**, and data files for everything that repeats.
 
 ## Preview locally
 
@@ -38,7 +38,7 @@ date:
 categories:
   - Numerical methods
 slug: short-url-name
-description: One sentence, shown under the title on the Writing page.
+description: One sentence, shown under the title on the Blog page.
 cover: img/<name>-cover.png
 ---
 
@@ -51,7 +51,7 @@ First paragraph, the opening of the post.
 The rest of the post. Inline maths $x^2$, display maths $$...$$.
 ```
 
-The Writing page lists each post with its date, reading time, title, topics,
+The Blog page lists each post with its date, reading time, title, topics,
 `description` and `cover`, a 4:3 picture in `docs/writing/posts/img/` shown on
 the right. A post without
 `cover` takes the full width.
@@ -63,7 +63,7 @@ need a few extra packages that the site build does not:
 pip install -r scripts/requirements.txt
 python scripts/euler_maruyama_sho.py
 python scripts/infomeasure_checks.py
-python scripts/post_covers.py           # thumbnails for the Writing page
+python scripts/post_covers.py           # thumbnails for the Blog page
 ```
 
 ## Deploy to GitHub Pages

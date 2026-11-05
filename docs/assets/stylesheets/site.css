@@ -984,7 +984,7 @@
   text-transform: uppercase;
 }
 
-/* Writing list: text on the left, cover on the right. The list is rendered
+/* Blog list: text on the left, cover on the right. The list is rendered
    outside .md-typeset, so these rules set their own type and link colours. */
 .st-post {
   display: grid;

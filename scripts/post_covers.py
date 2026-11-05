@@ -3,7 +3,7 @@ scripts/post_covers.py
 
 Motivation
 ----------
-Thumbnails for the list of posts on the Writing page. Each post names its
+Thumbnails for the list of posts on the Blog page. Each post names its
 cover in the front matter, as `cover: img/<name>-cover.png`,
 and the list shows it next to the title. The goal is one small, text-free
 picture per post that matches the navy banner of the site. It is pursued by
@@ -37,7 +37,7 @@ NAVY = "#1e3a8a"
 NAVY_DEEP = "#0f1f4d"
 LIGHT = "#93b4ff"
 OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "writing" / "posts" / "img"
-SIZE = (4.0, 3.0)  # 4:3, the aspect the Writing list crops to
+SIZE = (4.0, 3.0)  # 4:3, the aspect the Blog list crops to
 
 
 def banner_axes(fig):
