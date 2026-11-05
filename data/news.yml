@@ -1,0 +1,20 @@
+# Shown under "Latest" on the home page, newest first. `url` may be a site path.
+- date: Jul 2026
+  title: Delay selection by STDP, in the Journal of Neuroscience
+  url: publications/
+  text: Plasticity selects the conduction delays that make a network efficient at transmitting signals. With A. Ghadiri, H. Rezaei, A. Aertsen, A. Kumar and A. Valizadeh.
+
+- date: Jun 2026
+  title: Inhibition sets the rhythm, in Physical Review Research
+  url: publications/
+  text: Inhibitory synaptic timescales drive transitions between oscillatory regimes in recurrent E–I networks.
+
+- date: "2025"
+  title: PhD in Physics, theoretical neuroscience
+  url: cv/
+  text: "Thesis: Modeling the dynamics of excitatory-inhibitory networks and their response to alternating current stimulation. The LaTeX source, figures and build files are on GitHub."
+
+- date: "2025"
+  title: Tuning the brain rhythms, in Chaos, Solitons & Fractals
+  url: publications/
+  text: How a network's internal coherence decides how far tACS can entrain it. Code and data are open.

@@ -1,0 +1,8 @@
+<svg viewBox="0 0 480 270" aria-hidden="true" class="st-svg">
+<circle cx="240" cy="135" r="108" fill="#e7e9ee"></circle>
+<circle cx="240" cy="135" r="108" fill="none" stroke="#c4c8d0" stroke-width="6" opacity="0.5"></circle>
+<line x1="132" y1="180" x2="356" y2="99" stroke="#565d6b" stroke-width="1" stroke-dasharray="3 4"></line>
+<g fill="#14171d"><circle cx="158" cy="170.6" r="6" opacity="0.35"></circle><circle cx="201" cy="155.1" r="6" opacity="0.5"></circle><circle cx="244" cy="139.5" r="6" opacity="0.7"></circle><circle cx="287" cy="124" r="6" opacity="0.85"></circle><circle cx="330" cy="108.4" r="6"></circle></g>
+<circle cx="330" cy="108.4" r="11" fill="none" style="stroke: var(--st-accent-dark)" stroke-width="2"></circle>
+<text x="24" y="246" fill="#9aa1ae" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em">TRANSIT OF VENUS · 2012</text>
+</svg>

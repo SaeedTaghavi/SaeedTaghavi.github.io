@@ -1,0 +1,9 @@
+{#-
+  Home page: the shared banner header comes from main.html. The page's own
+  Markdown (docs/index.md) is rendered without an extra page title.
+-#}
+{% extends "main.html" %}
+
+{% block content %}
+{{ page.content }}
+{% endblock %}

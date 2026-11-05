@@ -1,0 +1,69 @@
+# One entry per item, newest first. Fields:
+#   year, type (Journal | Thesis | Abstract | Preprint), theme,
+#   title, authors (list; your own name is matched by `me`), venue,
+#   summary, links (list of {label, url})
+# Square brackets mark facts still to fill in.
+
+- year: 2026
+  type: Journal
+  theme: Delays and plasticity
+  title: Delay selection by spike-timing-dependent plasticity shapes efficient networks for signal transmission
+  authors: [Ghadiri A, Taghavi S, Rezaei H, Aertsen A, Kumar A, Valizadeh A]
+  venue: Journal of Neuroscience, 2026
+  summary: STDP prunes inter-layer connections with distributed conduction delays and keeps those compatible with propagating activity.
+  links:
+    - {label: DOI, url: "https://doi.org/10.1523/JNEUROSCI.0103-26.2026"}
+
+- year: 2026
+  type: Journal
+  theme: Rhythms and entrainment
+  title: Inhibitory synaptic timescales drive oscillatory regime transitions in recurrent excitatory-inhibitory networks
+  authors: [Kheiri S, Taghavi S, Valizadeh A, Perc M]
+  venue: Physical Review Research 8, 023251 (2026)
+  summary: Inhibitory synaptic timescales drive transitions between oscillatory regimes in recurrent E–I networks.
+  links:
+    - {label: DOI, url: "https://doi.org/10.1103/zmn7-7kf6"}
+    - {label: Code, url: "https://github.com/siamakkheiri/inhibitory-timescale-transitions-regime"}
+
+- year: 2025
+  type: Journal
+  theme: Rhythms and entrainment
+  title: "Tuning the brain rhythms: How internal coherence influences network entrainment by tACS"
+  authors: [Taghavi S, Susi G, Maestú F, Valizadeh A]
+  venue: Chaos, Solitons & Fractals 201, 117421 (2025)
+  summary: AdEx E/I networks in NEST driven by tACS. The Arnold tongue widens when endogenous synchrony is low.
+  links:
+    - {label: DOI, url: "https://doi.org/10.1016/j.chaos.2025.117421"}
+    - {label: Code, url: "https://github.com/SaeedTaghavi/entrainment-of-population-activity-to-tacs-for-different-levels-of-network-synchronization"}
+
+- year: 2025
+  type: Thesis
+  theme: Several themes
+  title: Modeling the dynamics of excitatory-inhibitory networks and their response to alternating current stimulation
+  authors: [Taghavi S]
+  venue: PhD thesis in Physics, Institute for Advanced Studies in Basic Sciences (IASBS), Zanjan, 2025
+  summary: Chapter 4 is the tACS entrainment study. The repository holds the LaTeX source, every figure and the Makefile that builds them.
+  links:
+    - {label: Code, url: "https://github.com/SaeedTaghavi/phd-thesis"}
+
+- year: 2024
+  type: Abstract
+  theme: Synchrony on networks
+  title: Local phase synchronization and clustering for delayed phase coupled oscillators in k-nearest-neighbors network
+  authors: [Taghavi S, Madadi Asl M, Valizadeh A]
+  venue: Conference abstract, ICTP, 2024
+  summary: Kuramoto oscillators on a ring, each coupled to its k nearest neighbours with distance-dependent delays. Competing delays break the translational symmetry of the ring, and clusters of synchronised oscillators emerge.
+  links:
+    - {label: PDF, url: "../assets/papers/2024-ictp-local-phase-sync-clustering.pdf"}
+    - {label: Code, url: "https://github.com/SaeedTaghavi/kuramotoRing"}
+
+- year: 2015
+  type: Journal
+  theme: Astrophysics
+  title: "Galactic orbital motions of star clusters: static versus semicosmological time-dependent Galactic potentials"
+  authors: [Haghi H, Hasani Zonoozi A, Taghavi S]
+  venue: Monthly Notices of the Royal Astronomical Society 450, 2812–2821 (2015)
+  summary: Orbits integrated back 13 Gyr in a static and in a growing Milky Way potential. A static potential overestimates the mass loss and dissolution of globular clusters and underestimates their final sizes.
+  links:
+    - {label: DOI, url: "https://doi.org/10.1093/mnras/stv827"}
+    - {label: arXiv, url: "https://arxiv.org/abs/1505.00495"}

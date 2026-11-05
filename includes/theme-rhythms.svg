@@ -1,0 +1,7 @@
+<svg viewBox="0 0 240 140" role="img" aria-label="Two Arnold tongues; the wider one belongs to the weakly synchronised network" class="st-svg">
+<line x1="24" y1="122" x2="224" y2="122" style="stroke: var(--st-muted)" stroke-width="1"></line><line x1="24" y1="122" x2="24" y2="12" style="stroke: var(--st-muted)" stroke-width="1"></line>
+<path d="M124 122 Q 96 70 40 14 L 208 14 Q 152 70 124 122 Z" style="fill: var(--st-accent); stroke: var(--st-accent)" fill-opacity="0.16" stroke-width="1.6"></path>
+<path d="M124 122 Q 114 70 92 14 L 156 14 Q 134 70 124 122 Z" fill="none" style="stroke: var(--st-ink)" stroke-width="1.6" stroke-dasharray="4 3"></path>
+<text x="224" y="136" text-anchor="end" style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px">drive frequency</text>
+<text x="18" y="12" text-anchor="end" transform="rotate(-90 18 12)" style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px">amplitude</text>
+</svg>

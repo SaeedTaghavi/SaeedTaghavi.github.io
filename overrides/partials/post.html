@@ -1,0 +1,42 @@
+{#-
+  One entry in the Writing list, in place of Material's excerpt: date and
+  reading time, the title, the topics and the summary from the front matter,
+  and the cover picture on the right. A post sets its summary with
+  `description:` and its picture with `cover: img/<name>-cover.png`, a path
+  relative to the post. hooks/writing.py resolves the title and the cover.
+  Without a cover the text takes the full width.
+-#}
+{% set cover = post | post_cover %}
+<article class="md-post st-post{% if not cover %} st-post--plain{% endif %}">
+  <div class="st-post__text">
+    <p class="st-post__meta">
+      <time datetime="{{ post.config.date.created }}">
+        {{- post.config.date.created | date -}}
+      </time>
+      {%- if post.config.readtime %}
+        {%- set time = post.config.readtime %}
+        <span>
+          {%- if time == 1 %}{{ lang.t("readtime.one") }}
+          {%- else %}{{ lang.t("readtime.other") | replace("#", time) }}{% endif -%}
+        </span>
+      {%- endif %}
+      {%- if post.config.draft %}<span>{{ lang.t("blog.draft") }}</span>{% endif %}
+    </p>
+    <h2 class="st-post__title"><a href="{{ post.url | url }}">{{ post | post_title }}</a></h2>
+    {% if post.categories %}
+      <p class="st-post__topics">
+        {%- for category in post.categories %}
+          <a href="{{ category.url | url }}">{{ category.title }}</a>
+        {%- endfor %}
+      </p>
+    {% endif %}
+    {% if post.meta.description %}
+      <p class="st-post__summary">{{ post.meta.description }}</p>
+    {% endif %}
+  </div>
+  {% if cover %}
+    <a class="st-post__cover" href="{{ post.url | url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ cover | url }}" alt="" loading="lazy" width="1200" height="900">
+    </a>
+  {% endif %}
+</article>

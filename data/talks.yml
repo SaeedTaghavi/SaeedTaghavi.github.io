@@ -1,0 +1,24 @@
+# One entry per recording. audience: Academic | General audience
+# `cover` is optional: an SVG file in includes/. Without it, the YouTube
+# thumbnail is shown in greyscale and turns to colour on hover.
+- title: Phase-Dependent Suppression of Neuronal Oscillations
+  youtube: GGTBYIeM1FU
+  cover: cover-suppression.svg
+  audience: Academic
+  theme: Synchrony on networks
+  date: 20 Feb 2020
+  duration: "18:08"
+  event: Conference of Neuroscience and the Physics of Neuronal Systems
+  place: Sharif University of Technology, Tehran
+  description: A population of Kuramoto rotators stands in for pathological brain rhythms. The talk shows how input delivered at the right phase of the collective oscillation can desynchronise the population and suppress the rhythm.
+
+- title: Venus transit, 2012
+  youtube: 1i72CtsG4eA
+  cover: cover-venus.svg
+  audience: General audience
+  theme: Astronomy
+  date: 5–6 Jun 2012
+  duration: "1:01"
+  event: ""
+  place: ""
+  description: One minute of the 2012 transit of Venus, the planet's dark disc crossing the face of the Sun. Transits of Venus come in pairs eight years apart, and the next pair begins in 2117.

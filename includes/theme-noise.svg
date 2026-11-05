@@ -1,0 +1,8 @@
+<svg viewBox="0 0 240 140" role="img" aria-label="Signal-to-noise ratio peaking at an intermediate noise level" class="st-svg">
+<line x1="24" y1="122" x2="224" y2="122" style="stroke: var(--st-muted)" stroke-width="1"></line><line x1="24" y1="122" x2="24" y2="12" style="stroke: var(--st-muted)" stroke-width="1"></line>
+<line x1="109" y1="26" x2="109" y2="122" style="stroke: var(--st-muted)" stroke-width="1" stroke-dasharray="2 3"></line>
+<path d="M24.0 118.0 L29.0 118.0 L34.0 118.0 L39.0 118.0 L44.0 117.4 L49.0 115.0 L54.0 109.1 L59.0 99.7 L64.0 87.7 L69.0 74.8 L74.0 62.5 L79.0 51.7 L84.0 42.9 L89.0 36.1 L94.0 31.3 L99.0 28.2 L104.0 26.5 L109.0 26.0 L114.0 26.4 L119.0 27.6 L124.0 29.2 L129.0 31.3 L134.0 33.6 L139.0 36.1 L144.0 38.7 L149.0 41.4 L154.0 44.1 L159.0 46.7 L164.0 49.3 L169.0 51.9 L174.0 54.4 L179.0 56.8 L184.0 59.1 L189.0 61.3 L194.0 63.4 L199.0 65.5 L204.0 67.4 L209.0 69.3 L214.0 71.1 L219.0 72.8 L224.0 74.4" fill="none" style="stroke: var(--st-accent)" stroke-width="2"></path>
+<g style="fill: var(--st-card); stroke: var(--st-accent)" stroke-width="1.6"><circle cx="49.0" cy="115.0" r="3"></circle><circle cx="74.0" cy="62.5" r="3"></circle><circle cx="99.0" cy="28.2" r="3"></circle><circle cx="124.0" cy="29.2" r="3"></circle><circle cx="149.0" cy="41.4" r="3"></circle><circle cx="174.0" cy="54.4" r="3"></circle><circle cx="199.0" cy="65.5" r="3"></circle><circle cx="224.0" cy="74.4" r="3"></circle></g>
+<text x="224" y="136" text-anchor="end" style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px">noise intensity</text>
+<text x="18" y="12" text-anchor="end" transform="rotate(-90 18 12)" style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px">SNR</text>
+</svg>

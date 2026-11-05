@@ -1,0 +1,41 @@
+{#-
+  Site header shown on every page: a full-width banner with photo, name,
+  role and profile icons, then a rounded navigation bar that overlaps the
+  banner's lower edge and stays pinned while scrolling. Pages other than
+  Home open scrolled to the navigation bar (assets/javascripts/nav.js).
+  Photo, initials and role lines live in mkdocs.yml under `extra`.
+-#}
+<section class="st-banner" aria-labelledby="st-banner-name">
+  <div class="st-banner__inner">
+    {% if config.extra.photo %}
+    <img class="st-banner__photo" src="{{ config.extra.photo | url }}" alt="Portrait of {{ config.site_name }}">
+    {% else %}
+    <div class="st-banner__photo st-banner__photo--placeholder" role="img" aria-label="Photo placeholder">
+      <span>{{ config.extra.initials or "ST" }}</span>
+    </div>
+    {% endif %}
+    {% if page.is_homepage %}
+    <h1 class="st-banner__name" id="st-banner-name">{{ config.site_name }}</h1>
+    {% else %}
+    <p class="st-banner__name" id="st-banner-name">{{ config.site_name }}</p>
+    {% endif %}
+    {% if config.extra.banner_lines %}
+    <p class="st-banner__role">
+      {%- for line in config.extra.banner_lines %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor -%}
+    </p>
+    {% endif %}
+    <nav class="st-banner__icons" aria-label="Profiles">
+      {% for s in config.extra.social %}
+      <a href="{{ s.link }}" title="{{ s.name }}" aria-label="{{ s.name }}"{% if not s.link.startswith("mailto:") %} target="_blank" rel="noopener"{% endif %}>{% include ".icons/" ~ s.icon ~ ".svg" %}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+<nav class="st-pill" aria-label="Main" data-home="{{ 'true' if page.is_homepage else 'false' }}">
+  <div>
+    {% for item in nav %}
+    {% if item.is_page %}{% set target = item %}{% else %}{% set target = item.children | first %}{% endif %}
+    <a href="{{ target.url | url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    {% endfor %}
+  </div>
+</nav>

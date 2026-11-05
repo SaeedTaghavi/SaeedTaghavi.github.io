@@ -1,0 +1,4 @@
+# Only needed to regenerate the figures in scripts/, not to build the site.
+numpy>=2.0
+matplotlib>=3.9
+infomeasure>=0.6

@@ -1,0 +1,11 @@
+{#-
+  Every page: replace Material's tab bar with the banner and the rounded
+  navigation bar from partials/st-header.html.
+-#}
+{% extends "base.html" %}
+
+{% block tabs %}{% endblock %}
+
+{% block hero %}
+{% include "partials/st-header.html" %}
+{% endblock %}

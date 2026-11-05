@@ -1,0 +1,50 @@
+# Grouped by `group`. `home: true` puts the entry in the grid on the home page.
+# `link_label` is shown at the top right of each entry (GitHub, Site, Product, Soon).
+
+- name: entrainment-of-population-activity-to-tacs
+  group: Research code
+  home: true
+  short: tACS entrainment
+  url: https://github.com/SaeedTaghavi/entrainment-of-population-activity-to-tacs-for-different-levels-of-network-synchronization
+  link_label: GitHub
+  description: Simulations and analysis for the Chaos, Solitons & Fractals paper. AdEx E/I networks at three levels of baseline synchrony, driven across frequency and amplitude to map Arnold tongues.
+  tags: [NEST, Python, Paper code]
+
+- name: kuramotoRing
+  group: Research code
+  home: true
+  url: https://github.com/SaeedTaghavi/kuramotoRing
+  link_label: GitHub
+  description: Phase oscillators on a ring, each coupled to its k nearest neighbours with distance-dependent delays. Local synchrony, phase clusters and how their number depends on the ring size.
+  tags: [Kuramoto, Delays]
+
+- name: phd-thesis
+  group: Research code
+  url: https://github.com/SaeedTaghavi/phd-thesis
+  link_label: GitHub
+  description: The full thesis as a reproducible build. LaTeX source, every plot and the Makefile that assembles them.
+  tags: [LaTeX, Make]
+
+- name: computational-neuroscience.ir
+  group: Teaching
+  home: true
+  url: https://computational-neuroscience.ir/
+  link_label: Site
+  description: An open computational neuroscience textbook in Persian. Numerical methods for ODEs and SDEs, signal processing and nonlinear dynamics.
+  tags: [Textbook, Open source]
+
+- name: deep-learning-course
+  group: Teaching
+  home: true
+  url: https://github.com/SaeedTaghavi/deep-learning-course
+  link_label: GitHub
+  description: One chapter per architecture for self-learners. LeNet on MNIST first, then AlexNet through to diffusion.
+  tags: [PyTorch, Course]
+
+- name: Distributed training on Kubernetes
+  group: Engineering projects
+  home: true
+  url: ""
+  link_label: GitHub
+  description: PyTorch DDP jobs on a kind cluster, scheduled by the Kubeflow Training Operator and launched from a FastAPI front end.
+  tags: [Kubernetes, Kubeflow, PyTorch DDP]

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 178" role="img" aria-label="A build, test and deploy pipeline above a git history where a feature branch and a fix merge into main before a release" class="st-svg">
+<g fill="none" stroke-width="1.4"><rect x="6.7" y="10.7" width="50.6" height="22.6" style="stroke: var(--st-muted)"></rect><rect x="74.7" y="10.7" width="50.6" height="22.6" style="stroke: var(--st-muted)"></rect><rect x="142.7" y="10.7" width="50.6" height="22.6" style="stroke: var(--st-accent)"></rect></g>
+<g style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 10px" text-anchor="middle"><text x="32" y="25.5">build</text><text x="100" y="25.5">test</text><text x="168" y="25.5" style="fill: var(--st-accent)">deploy</text></g>
+<g fill="none" style="stroke: var(--st-muted)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M61 22 H 70 M 66.5 18.5 L 70 22 L 66.5 25.5"></path><path d="M129 22 H 138 M 134.5 18.5 L 138 22 L 134.5 25.5"></path></g>
+<g fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M10 126 H 190" style="stroke: var(--st-ink)"></path><path d="M46 126 C 58 126, 60 80, 74 80 H 120 C 134 80, 140 126, 152 126" style="stroke: var(--st-muted)"></path><path d="M88 126 C 96 126, 98 154, 108 154 C 118 154, 120 126, 128 126" style="stroke: var(--st-muted)"></path></g>
+<g style="fill: var(--st-card); stroke: var(--st-ink)" stroke-width="2.4"><circle cx="20" cy="126" r="5"></circle><circle cx="46" cy="126" r="5"></circle><circle cx="88" cy="126" r="5"></circle><circle cx="128" cy="126" r="5"></circle><circle cx="152" cy="126" r="5"></circle></g>
+<g style="fill: var(--st-card); stroke: var(--st-muted)" stroke-width="2.4"><circle cx="84" cy="80" r="5"></circle><circle cx="108" cy="80" r="5"></circle><circle cx="108" cy="154" r="5"></circle></g>
+<circle cx="182" cy="126" r="11" fill="none" style="stroke: var(--st-accent)" stroke-width="1.4"></circle>
+<circle cx="182" cy="126" r="5.5" style="fill: var(--st-accent)"></circle>
+<g style="fill: var(--st-muted); font-family: 'IBM Plex Mono', monospace; font-size: 10px"><text x="12" y="146">main</text><text x="78" y="66">feature</text><text x="120" y="172">fix</text><text x="197" y="106" text-anchor="end" style="fill: var(--st-accent)">release</text></g>
+</svg>
