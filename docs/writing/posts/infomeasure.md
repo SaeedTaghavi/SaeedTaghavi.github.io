@@ -7,6 +7,9 @@ categories:
 slug: infomeasure-information-theory-in-python
 description: A pointer to infomeasure, an open-source Python library with ready-made estimators for entropy, mutual information and transfer entropy, and to a notebook that checks it against analytical results.
 cover: img/infomeasure-cover.png
+tags:
+  - Information theory
+  - Python
 ---
 
 # Mutual information and transfer entropy in Python with infomeasure

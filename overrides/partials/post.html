@@ -3,10 +3,13 @@
   reading time, the title, the topics and the summary from the front matter,
   and the cover picture on the right. A post sets its summary with
   `description:` and its picture with `cover: img/<name>-cover.png`, a path
-  relative to the post. hooks/writing.py resolves the title and the cover.
+  relative to the post. Under MkDocs, hooks/writing.py stores the resolved
+  title and cover address in st_list_title and st_cover_url. Zensical runs
+  no hooks, so the fallbacks are post.title and the cover under writing/,
+  where both engines publish the images of writing/posts/img/.
   Without a cover the text takes the full width.
 -#}
-{% set cover = post | post_cover %}
+{% set cover = post.meta.st_cover_url or (("writing/" ~ post.meta.cover) if post.meta.cover else "") %}
 <article class="md-post st-post{% if not cover %} st-post--plain{% endif %}">
   <div class="st-post__text">
     <p class="st-post__meta">
@@ -22,7 +25,7 @@
       {%- endif %}
       {%- if post.config.draft %}<span>{{ lang.t("blog.draft") }}</span>{% endif %}
     </p>
-    <h2 class="st-post__title"><a href="{{ post.url | url }}">{{ post | post_title }}</a></h2>
+    <h2 class="st-post__title"><a href="{{ post.url | url }}">{{ post.meta.st_list_title or post.title }}</a></h2>
     {% if post.categories %}
       <p class="st-post__topics">
         {%- for category in post.categories %}

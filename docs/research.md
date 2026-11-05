@@ -2,6 +2,15 @@
 title: Research
 hide:
   - navigation
+tags:
+  - Spiking networks
+  - Phase oscillators
+  - Synchrony
+  - Plasticity
+  - Brain stimulation
+  - Stochastic dynamics
+  - EEG
+  - Machine learning
 ---
 
 <div class="st-page-head">

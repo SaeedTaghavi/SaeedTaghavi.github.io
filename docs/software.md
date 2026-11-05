@@ -3,6 +3,15 @@ title: Software
 hide:
   - navigation
   - toc
+tags:
+  - Python
+  - NEST
+  - PyTorch
+  - Kubernetes
+  - Machine learning
+  - Teaching
+  - Spiking networks
+  - Phase oscillators
 ---
 
 <div class="st-page-head">

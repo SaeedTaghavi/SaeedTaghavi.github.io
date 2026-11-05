@@ -7,6 +7,11 @@ categories:
 slug: lenet-web-app
 description: A small web app that reads an uploaded handwritten digit with LeNet-5. Two Docker containers, one FastAPI endpoint, and a page that shows what the network actually sees.
 cover: img/lenet-web-app-cover.png
+tags:
+  - Machine learning
+  - PyTorch
+  - Docker
+  - Python
 ---
 
 # A web app that reads handwritten digits with LeNet-5

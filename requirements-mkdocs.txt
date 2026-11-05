@@ -1,0 +1,8 @@
+# Fallback: build the same project with Material for MkDocs.
+#   pip install -r requirements-mkdocs.txt
+#   mkdocs build --strict
+# MkDocs 2.0 will not run Material's plugins or theme overrides, hence mkdocs<2.
+mkdocs>=1.6,<2
+mkdocs-material>=9.7,<10
+mkdocs-macros-plugin>=1.3
+pyyaml>=6

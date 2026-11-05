@@ -2,9 +2,13 @@
   Site header shown on every page: a full-width banner with photo, name,
   role and profile icons, then a rounded navigation bar that overlaps the
   banner's lower edge and stays pinned while scrolling. Pages other than
-  Home open scrolled to the navigation bar (assets/javascripts/nav.js).
+  Home open scrolled to the navigation bar, and the Top button returns
+  there; on Home it returns to the banner (assets/javascripts/nav.js).
+  The empty .st-pill-anchor marks where the bar sits before it is pinned.
   Photo, initials and role lines live in mkdocs.yml under `extra`.
 -#}
+{#- Zensical has no page.is_homepage; in both engines the home page has an empty url. -#}
+{% set st_home = page.is_homepage or page.url == "" %}
 <section class="st-banner" aria-labelledby="st-banner-name">
   <div class="st-banner__inner">
     {% if config.extra.photo %}
@@ -14,7 +18,7 @@
       <span>{{ config.extra.initials or "ST" }}</span>
     </div>
     {% endif %}
-    {% if page.is_homepage %}
+    {% if st_home %}
     <h1 class="st-banner__name" id="st-banner-name">{{ config.site_name }}</h1>
     {% else %}
     <p class="st-banner__name" id="st-banner-name">{{ config.site_name }}</p>
@@ -26,16 +30,18 @@
     {% endif %}
     <nav class="st-banner__icons" aria-label="Profiles">
       {% for s in config.extra.social %}
-      <a href="{{ s.link }}" title="{{ s.name }}" aria-label="{{ s.name }}"{% if not s.link.startswith("mailto:") %} target="_blank" rel="noopener"{% endif %}>{% include ".icons/" ~ s.icon ~ ".svg" %}</a>
+      <a href="{{ s.link }}" title="{{ s.name }}" aria-label="{{ s.name }}"{% if "mailto:" not in s.link %} target="_blank" rel="noopener"{% endif %}>{% include ".icons/" ~ s.icon ~ ".svg" %}</a>
       {% endfor %}
     </nav>
   </div>
 </section>
-<nav class="st-pill" aria-label="Main" data-home="{{ 'true' if page.is_homepage else 'false' }}">
+<div class="st-pill-anchor" aria-hidden="true"></div>
+<nav class="st-pill" aria-label="Main" data-home="{{ 'true' if st_home else 'false' }}">
   <div>
-    {% for item in nav %}
-    {% if item.is_page %}{% set target = item %}{% else %}{% set target = item.children | first %}{% endif %}
+    {% for item in nav.items %}
+    {% if item.children %}{% set target = item.children | first %}{% else %}{% set target = item %}{% endif %}
     <a href="{{ target.url | url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.title }}</a>
     {% endfor %}
   </div>
 </nav>
+<button type="button" class="st-top" aria-label="Back to top">{% include ".icons/material/arrow-up.svg" %}<span>Top</span></button>

@@ -1,15 +1,18 @@
 # saeedtaghavi.github.io
 
-Personal site built with [MkDocs](https://www.mkdocs.org/) and
+Personal site built with [Zensical](https://zensical.org/), the successor of
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/): site
-search, a **Blog**, and data files for everything that repeats.
+search, a **Blog**, and data files for everything that repeats. Zensical reads
+`mkdocs.yml`, and the project still builds with Material for MkDocs as a fallback.
 
 ## Preview locally
 
 ```bash
+python3 -m venv .venv            # once: a private Python for this project
+source .venv/bin/activate        # every new terminal; `deactivate` leaves it
 pip install -r requirements.txt
-mkdocs serve            # http://127.0.0.1:8000, reloads on save
-mkdocs build --strict   # the same check the deploy runs
+zensical serve                   # http://localhost:8000, reloads on save
+zensical build --strict          # the same check the deploy runs
 ```
 
 ## Where things live
@@ -27,6 +30,17 @@ mkdocs build --strict   # the same check the deploy runs
 
 Square brackets in the content, such as `[Thesis title]`, mark facts still to fill in.
 
+## Tags
+
+A page or post can carry `tags:` in its front matter. The search box lists
+every tag under **Filters**, and picking one narrows the results to the pages
+with that tag. A tag applies to the whole page, so each of its sections shows
+up under the filter too. Keep to these names so the list stays short:
+
+Spiking networks, Phase oscillators, Synchrony, Plasticity, Brain stimulation, Stochastic dynamics, EEG, Machine learning, Information theory, Numerical methods, Astrophysics, Python, NEST, PyTorch, Docker, Kubernetes, Teaching.
+
+Home, the CV and the Blog index carry no tags, because they cover everything.
+
 ## Write a blog post
 
 Create `docs/writing/posts/<name>.md`:
@@ -37,6 +51,8 @@ date:
   created: 2026-11-05
 categories:
   - Numerical methods
+tags:
+  - Python
 slug: short-url-name
 description: One sentence, shown under the title on the Blog page.
 cover: img/<name>-cover.png
@@ -70,14 +86,25 @@ python scripts/post_covers.py           # thumbnails for the Blog page
 
 1. The site lives in `SaeedTaghavi/saeedtaghavi.github.io`, on the branch `master`. The earlier Jekyll site is kept on the branch `jekyll-site`.
 2. In the repository, **Settings → Pages → Source** is set to **GitHub Actions**.
-3. Every push to `master` builds with `--strict` and publishes to <https://saeedtaghavi.github.io/>. The workflow also accepts `main`, in case the branch is renamed.
+3. Every push to `master` runs `zensical build --strict` and publishes to <https://saeedtaghavi.github.io/>. The workflow also accepts `main`, in case the branch is renamed.
 
-`mkdocs gh-deploy --force` also works, as for computational-neuroscience.ir. In that case set the Pages source to the `gh-pages` branch instead.
+Zensical has no `gh-deploy` command, so the site is published only through this workflow.
 
 ## A note on versions
 
-Material for MkDocs is in maintenance mode, and MkDocs 2.0 will not run its
-plugins or theme overrides, so `requirements.txt` pins `mkdocs<2`. The same
-team now develops [Zensical](https://zensical.org/), which reads this
-`mkdocs.yml` and already supports the blog, search and macros plugins used
-here. Check its compatibility notes for theme overrides before switching.
+The site is built with Zensical, pinned to `0.1.0` in `requirements.txt`
+because it is still young. Raise the pin deliberately and check the result with
+`zensical serve`. `theme.variant: modern` in `mkdocs.yml` selects Zensical's
+modern look.
+
+The project also still builds with Material for MkDocs, which is in
+maintenance mode:
+
+```bash
+pip install -r requirements-mkdocs.txt
+mkdocs build --strict
+```
+
+Only that fallback uses `hooks/writing.py`, which works out the title and cover
+of each post for the Blog list under MkDocs. Zensical ignores MkDocs hooks, and
+`overrides/partials/post.html` falls back to what Zensical provides itself.

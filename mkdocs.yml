@@ -12,6 +12,7 @@ edit_uri: ""
 theme:
   name: material
   custom_dir: overrides
+  variant: modern            # Zensical's look; Material for MkDocs ignores it
   language: en
   font:
     text: Schibsted Grotesk
@@ -23,7 +24,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.indexes
-    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy

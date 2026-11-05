@@ -7,6 +7,10 @@ categories:
 slug: euler-maruyama-noisy-harmonic-oscillator
 description: How to add noise to an oscillator with the Euler–Maruyama scheme, why the noise term scales with the square root of the time step, and a check against an exact result for the mean energy.
 cover: img/euler-maruyama-cover.png
+tags:
+  - Numerical methods
+  - Stochastic dynamics
+  - Python
 ---
 
 # Euler–Maruyama for a noisy harmonic oscillator

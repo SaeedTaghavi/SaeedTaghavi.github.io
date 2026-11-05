@@ -1,4 +1,4 @@
-mkdocs>=1.6,<2
-mkdocs-material>=9.7,<10
-mkdocs-macros-plugin>=1.3
+# Builds the site. Zensical reads mkdocs.yml, including the macros in macros.py.
+# Pinned while Zensical is young: raise it deliberately and check with `zensical serve`.
+zensical==0.1.0
 pyyaml>=6

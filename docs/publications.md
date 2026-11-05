@@ -3,6 +3,13 @@ title: Publications
 hide:
   - navigation
   - toc
+tags:
+  - Spiking networks
+  - Phase oscillators
+  - Synchrony
+  - Plasticity
+  - Brain stimulation
+  - Astrophysics
 ---
 
 <div class="st-page-head">

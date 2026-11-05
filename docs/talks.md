@@ -3,6 +3,11 @@ title: Talks
 hide:
   - navigation
   - toc
+tags:
+  - Phase oscillators
+  - Synchrony
+  - Brain stimulation
+  - Astrophysics
 ---
 
 <div class="st-page-head">
