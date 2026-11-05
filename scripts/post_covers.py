@@ -16,6 +16,9 @@ Nothing new. It redraws, at thumbnail scale:
   phase plane, over the closed orbit without noise.
 * infomeasure-cover.png: a noisy circle, with its flat least-squares line,
   the dependence that correlation misses and mutual information finds.
+* lenet-web-app-cover.png: one MNIST test digit, smooth on the left and as the
+  28 x 28 grid of pixels that LeNet-5 receives on the right. The digit is
+  test image 30, a 3, stored in scripts/data/.
 
 Usage
 -----
@@ -30,6 +33,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.patches import FancyArrowPatch
 
 from euler_maruyama_sho import euler_maruyama_sho
 
@@ -37,6 +41,7 @@ NAVY = "#1e3a8a"
 NAVY_DEEP = "#0f1f4d"
 LIGHT = "#93b4ff"
 OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "writing" / "posts" / "img"
+DIGIT = Path(__file__).resolve().parent / "data" / "mnist-test-00030.png"
 SIZE = (4.0, 3.0)  # 4:3, the aspect the Blog list crops to
 
 
@@ -98,9 +103,51 @@ def cover_infomeasure(out, dpi, seed=0):
     plt.close(fig)
 
 
+def cover_lenet(out, dpi, cell=12, gap=2):
+    digit = plt.imread(DIGIT)  # 28 x 28 grayscale, values in [0, 1]
+    if digit.ndim == 3:
+        digit = digit[..., 0]
+    n = digit.shape[0]
+    white = LinearSegmentedColormap.from_list("ink", [(1, 1, 1, 0), (1, 1, 1, 1)])
+    white.set_bad((0, 0, 0, 0))
+
+    # Every pixel becomes a cell x cell block with a transparent gap around it.
+    # Empty pixels keep a faint floor so the 28 x 28 grid stays visible.
+    grid = np.full((n * cell, n * cell), np.nan)
+    for i in range(n):
+        for j in range(n):
+            r, c = i * cell, j * cell
+            grid[r : r + cell - gap, c : c + cell - gap] = 0.1 + 0.9 * digit[i, j]
+
+    fig = plt.figure(figsize=SIZE)
+    banner_axes(fig)
+    side = 0.4 * SIZE[0] / SIZE[1]  # square panels in figure coordinates
+    left = fig.add_axes([0.04, 0.5 - side / 2, 0.4, side])
+    right = fig.add_axes([0.56, 0.5 - side / 2, 0.4, side])
+    left.imshow(digit, cmap=white, interpolation="bicubic", vmin=0, vmax=1)
+    right.imshow(grid, cmap=white, interpolation="nearest", vmin=0, vmax=1)
+    for a in (left, right):
+        a.set_facecolor("none")
+        a.axis("off")
+    fig.add_artist(
+        FancyArrowPatch(
+            (0.455, 0.5),
+            (0.545, 0.5),
+            transform=fig.transFigure,
+            arrowstyle="-|>",
+            mutation_scale=16,
+            lw=2.4,
+            color=LIGHT,
+        )
+    )
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
+    "lenet": ("lenet-web-app-cover.png", cover_lenet),
 }
 
 
