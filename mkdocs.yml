@@ -118,6 +118,21 @@ extra:
       link: mailto:saeed.taghavi.v@gmail.com
       name: Email
   generator: false
+  # Google Analytics 4. With `consent` set, the GA script only loads after the
+  # visitor accepts the cookie banner (GDPR). "Cookie settings" in the footer
+  # (see `copyright` below) reopens the banner.
+  analytics:
+    provider: google
+    property: G-H4JHRB2LDE
+  consent:
+    title: Cookie consent
+    description: >-
+      This site uses cookies from Google Analytics to count visits and see which
+      pages are read. Nothing is collected unless you accept.
+    actions:
+      - accept
+      - reject
+      - manage
   # Home banner portrait. Put the image in docs/assets/images/ and set the
   # path, e.g. assets/images/photo.jpg. Until then the initials are shown.
   photo: assets/images/photo.jpg
@@ -136,4 +151,6 @@ extra_javascript:
   - assets/javascripts/filters.js
   - assets/javascripts/nav.js
 
-copyright: Saeed Taghavi · Zapata-Briceño Institute of Neuroscience, Madrid
+copyright: >-
+  Saeed Taghavi · Zapata-Briceño Institute of Neuroscience, Madrid ·
+  <a href="#__consent">Cookie settings</a>
