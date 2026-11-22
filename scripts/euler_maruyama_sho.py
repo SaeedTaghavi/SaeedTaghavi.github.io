@@ -35,9 +35,13 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-INK = "#0f172a"
-MUTED = "#9ba8bf"
-ACCENT = "#1e3a8a"
+INK = "#13212b"
+MUTED = "#a3b1ba"
+ACCENT = "#e4572e"
+# Same roles as the site figures: grey for reference, blue for simulated or
+# estimated data, vermilion for theory, amber for a secondary series.
+BLUE = "#2878b5"
+AMBER = "#e9a23b"
 DEFAULT_OUT = (
     Path(__file__).resolve().parents[1]
     / "docs"
@@ -111,25 +115,25 @@ def main():
     )
 
     ax["x"].plot(t, x_det[:, 0], color=MUTED, lw=1.0, label=r"$\sigma = 0$")
-    ax["x"].plot(t, x_one, color=INK, lw=1.0, label=rf"$\sigma = {args.sigma}$")
+    ax["x"].plot(t, x_one, color=BLUE, lw=1.0, label=rf"$\sigma = {args.sigma}$")
     ax["x"].set_ylabel(r"$x$")
     ax["x"].legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), frameon=False, ncols=2)
     ax["x"].tick_params(labelbottom=False)
 
     ax["v"].plot(t, v_det[:, 0], color=MUTED, lw=1.0)
-    ax["v"].plot(t, v_one, color=ACCENT, lw=0.8)
+    ax["v"].plot(t, v_one, color=BLUE, lw=0.8)
     ax["v"].set_ylabel(r"$v$")
     ax["v"].set_xlabel(r"time $t$")
     ax["v"].sharex(ax["x"])
 
     ax["phase"].plot(x_det[:, 0], v_det[:, 0], color=MUTED, lw=1.2)
-    ax["phase"].plot(x_one, v_one, color=ACCENT, lw=0.5, alpha=0.9)
+    ax["phase"].plot(x_one, v_one, color=BLUE, lw=0.5, alpha=0.9)
     ax["phase"].set_xlabel(r"$x$")
     ax["phase"].set_ylabel(r"$v$")
     ax["phase"].set_title("phase plane", loc="left", fontsize=10)
 
     ax["E"].plot(t, e_det, color=MUTED, lw=1.0, label=r"$\sigma = 0$, one path")
-    ax["E"].plot(t, e_mean, color=INK, lw=1.4, label=rf"mean over {args.paths} paths")
+    ax["E"].plot(t, e_mean, color=BLUE, lw=1.6, label=rf"mean over {args.paths} paths")
     ax["E"].plot(
         t,
         e_theory,

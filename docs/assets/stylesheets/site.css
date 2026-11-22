@@ -4,28 +4,36 @@
    ------------------------------------------------------------------ */
 :root,
 [data-md-color-scheme="default"] {
-  --st-bg: #f5f7fa;
-  --st-ink: #0f172a;
-  --st-muted: #4e5a70;
-  --st-line: #d8dee8;
+  --st-bg: #f5f8f9;
+  --st-ink: #13212b;
+  --st-muted: #51606b;
+  --st-line: #d6dee3;
   --st-card: #ffffff;
-  --st-soft: #edf1f6;
-  --st-accent: #1e3a8a;
-  --st-accent-dark: #93b4ff;
+  --st-soft: #ebf1f4;
+  --st-accent: #1d4e6b;
+  --st-accent-dark: #8cc3e0;
   --st-highlight: #c2410c;
+  /* Plot categories: same meaning in every figure. Distinct in lightness as
+     well as hue, so they stay apart for colour-blind readers. */
+  --st-c1: #e4572e;
+  --st-c2: #2878b5;
+  --st-c3: #e9a23b;
   --st-mono: var(--md-code-font-family, "IBM Plex Mono", ui-monospace, monospace);
 }
 
 [data-md-color-scheme="slate"] {
-  --st-bg: #0b1220;
-  --st-ink: #e6ebf4;
-  --st-muted: #9ba8bf;
-  --st-line: #222e45;
-  --st-card: #111a2c;
-  --st-soft: #17223a;
-  --st-accent: #93b4ff;
-  --st-accent-dark: #93b4ff;
+  --st-bg: #0b1820;
+  --st-ink: #e4ecf0;
+  --st-muted: #95a7b2;
+  --st-line: #1f3240;
+  --st-card: #10212d;
+  --st-soft: #152a38;
+  --st-accent: #8cc3e0;
+  --st-accent-dark: #8cc3e0;
   --st-highlight: #fb923c;
+  --st-c1: #ff7a52;
+  --st-c2: #5aa9e6;
+  --st-c3: #f2b85b;
 }
 
 /* Map the tokens onto Material's own variables. */
@@ -147,7 +155,7 @@ body > div[style*="position: fixed"] {
 .md-typeset a {
   text-decoration: none;
 }
-/* Hover keeps the navy and adds an underline, instead of switching hue. */
+/* Hover keeps the accent and adds an underline, instead of switching hue. */
 .md-typeset a:hover {
   color: var(--st-accent);
   text-decoration: underline;
@@ -277,15 +285,15 @@ body > div[style*="position: fixed"] {
    ------------------------------------------------------------------ */
 /* Home banner, pill navigation and introduction */
 .st-banner {
-  background-color: #14275c;
+  background-color: #163e55;
   background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.4px),
-    linear-gradient(180deg, #1e3a8a 0%, #0f1f4d 100%);
+    linear-gradient(180deg, #1d4e6b 0%, #0f2e42 100%);
   background-size: 18px 18px, 100% 100%;
   color: #ffffff;
 }
 [data-md-color-scheme="slate"] .st-banner {
   background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1.4px),
-    linear-gradient(180deg, #172d6b 0%, #0b1220 100%);
+    linear-gradient(180deg, #183f57 0%, #0b1820 100%);
 }
 .st-banner__inner {
   max-width: 38rem;
@@ -307,7 +315,7 @@ body > div[style*="position: fixed"] {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 .st-banner__photo--placeholder {
-  background: #2c4fa3;
+  background: #2b6a8e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,7 +349,7 @@ body > div[style*="position: fixed"] {
   height: 2.2rem;
   border-radius: 50%;
   background: #ffffff;
-  color: #14275c;
+  color: #1d4e6b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,7 +357,7 @@ body > div[style*="position: fixed"] {
 }
 .st-banner__icons a:hover,
 .st-banner__icons a:focus-visible {
-  background: #dbe4ff;
+  background: #d6e8f2;
 }
 .st-banner__icons svg {
   width: 1rem;
@@ -376,7 +384,7 @@ body > div[style*="position: fixed"] {
   background: var(--st-card);
   border: 1px solid var(--st-line);
   border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 6px 18px rgba(19, 33, 43, 0.14);
 }
 .st-pill a {
   padding: 0.6rem 0.7rem;
@@ -408,7 +416,7 @@ body > div[style*="position: fixed"] {
   background: var(--st-card);
   border: 1px solid var(--st-line);
   border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 6px 18px rgba(19, 33, 43, 0.14);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;

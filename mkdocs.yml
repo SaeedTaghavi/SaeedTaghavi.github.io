@@ -98,15 +98,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/SaeedTaghavi
       name: GitHub
-    - icon: fontawesome/brands/gitlab
-      link: https://gitlab.com/SaeedTaghavi
-      name: GitLab
     - icon: fontawesome/brands/google-scholar
       link: https://scholar.google.com/citations?user=ew2KPK4AAAAJ
       name: Google Scholar
-    - icon: fontawesome/brands/orcid
-      link: https://orcid.org/0000-0003-1685-5639
-      name: ORCID
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/saeed-taghavi-a16488130/
       name: LinkedIn

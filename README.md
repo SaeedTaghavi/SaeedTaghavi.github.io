@@ -7,6 +7,21 @@ search, a **Blog**, and data files for everything that repeats. Zensical reads
 
 ## Preview locally
 
+With `make` (Linux or WSL). The first run creates `.venv` and installs
+`requirements.txt`, and reinstalls only when that file changes:
+
+```bash
+make local                       # http://localhost:8000, reloads on save
+make build                       # the same strict check the deploy runs
+make push MSG="Describe change"  # build, commit ALL changes, push the current branch
+make clean                       # remove site/ and .cache/
+```
+
+`make push` stops before committing if the build fails, and uses
+"Update site" when `MSG` is left out.
+
+Or by hand:
+
 ```bash
 python3 -m venv .venv            # once: a private Python for this project
 source .venv/bin/activate        # every new terminal; `deactivate` leaves it

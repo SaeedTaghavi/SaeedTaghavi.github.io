@@ -37,9 +37,13 @@ import infomeasure as im
 import matplotlib.pyplot as plt
 import numpy as np
 
-INK = "#0f172a"
-MUTED = "#9ba8bf"
-ACCENT = "#1e3a8a"
+INK = "#13212b"
+MUTED = "#a3b1ba"
+ACCENT = "#e4572e"
+# Same roles as the site figures: grey for reference, blue for simulated or
+# estimated data, vermilion for theory, amber for a secondary series.
+BLUE = "#2878b5"
+AMBER = "#e9a23b"
 DEFAULT_OUT = (
     Path(__file__).resolve().parents[1]
     / "docs"
@@ -120,7 +124,7 @@ def main():
     )
 
     a = ax["circle"]
-    a.scatter(cx, cy, s=3, color=INK, alpha=0.5, linewidths=0)
+    a.scatter(cx, cy, s=3, color=BLUE, alpha=0.6, linewidths=0)
     xs = np.array([-1.3, 1.3])
     a.plot(xs, slope * xs + intercept, color=ACCENT, lw=1.4, ls="--")
     a.set_aspect("equal")
@@ -135,16 +139,16 @@ def main():
     )
 
     a = ax["te"]
-    a.plot(g_fine, te_theory, color=INK, lw=1.4, label="analytical")
+    a.plot(g_fine, te_theory, color=ACCENT, lw=1.6, label="analytical")
     a.plot(
         gammas,
         te_xy,
         "o",
-        color=ACCENT,
+        color=BLUE,
         ms=5,
         label=r"$TE_{x \to y}$, estimated",
     )
-    a.plot(gammas, te_yx, "s", color=MUTED, ms=4, label=r"$TE_{y \to x}$, reverse")
+    a.plot(gammas, te_yx, "s", color=AMBER, ms=4, label=r"$TE_{y \to x}$, reverse")
     a.plot(
         gammas,
         te_ctrl,

@@ -6,7 +6,7 @@ Motivation
 Thumbnails for the list of posts on the Blog page. Each post names its
 cover in the front matter, as `cover: img/<name>-cover.png`,
 and the list shows it next to the title. The goal is one small, text-free
-picture per post that matches the navy banner of the site. It is pursued by
+picture per post that matches the petrol-blue banner of the site. It is pursued by
 drawing each post's central object on the banner gradient and dot texture.
 
 What it measures
@@ -37,19 +37,21 @@ from matplotlib.patches import FancyArrowPatch
 
 from euler_maruyama_sho import euler_maruyama_sho
 
-NAVY = "#1e3a8a"
-NAVY_DEEP = "#0f1f4d"
-LIGHT = "#93b4ff"
+PETROL = "#1d4e6b"
+PETROL_DEEP = "#0f2e42"
+LIGHT = "#ff7a52"
+SKY = "#8cc3e0"
+AMBER = "#f2b85b"
 OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "writing" / "posts" / "img"
 DIGIT = Path(__file__).resolve().parent / "data" / "mnist-test-00030.png"
 SIZE = (4.0, 3.0)  # 4:3, the aspect the Blog list crops to
 
 
 def banner_axes(fig):
-    """Navy diagonal gradient with a faint dot grid, and a clear axes on top."""
+    """Petrol-blue diagonal gradient with a faint dot grid, and a clear axes on top."""
     bg = fig.add_axes([0, 0, 1, 1])
     u, v = np.meshgrid(np.linspace(0, 1, 400), np.linspace(0, 1, 300))
-    cmap = LinearSegmentedColormap.from_list("banner", [NAVY, NAVY_DEEP])
+    cmap = LinearSegmentedColormap.from_list("banner", [PETROL, PETROL_DEEP])
     bg.imshow(0.5 * (u + v), cmap=cmap, extent=(0, 4, 0, 3), aspect="auto")
     gx, gy = np.meshgrid(np.arange(0.1, 4, 0.2), np.arange(0.1, 3, 0.2))
     bg.scatter(gx, gy, s=0.6, color="white", alpha=0.12, linewidths=0)
@@ -94,7 +96,7 @@ def cover_infomeasure(out, dpi, seed=0):
 
     fig = plt.figure(figsize=SIZE)
     ax = banner_axes(fig)
-    ax.scatter(x, y, s=6, color="white", alpha=0.8, linewidths=0)
+    ax.scatter(x, y, s=6, color=SKY, alpha=0.85, linewidths=0)
     xs = np.array([-1.9, 1.9])
     ax.plot(xs, slope * xs + intercept, color=LIGHT, lw=2.6, ls=(0, (3, 2)))
     ax.set_xlim(-1.9, 1.9)
@@ -110,6 +112,8 @@ def cover_lenet(out, dpi, cell=12, gap=2):
     n = digit.shape[0]
     white = LinearSegmentedColormap.from_list("ink", [(1, 1, 1, 0), (1, 1, 1, 1)])
     white.set_bad((0, 0, 0, 0))
+    amber = LinearSegmentedColormap.from_list("amber", [(1, 1, 1, 0), AMBER])
+    amber.set_bad((0, 0, 0, 0))
 
     # Every pixel becomes a cell x cell block with a transparent gap around it.
     # Empty pixels keep a faint floor so the 28 x 28 grid stays visible.
@@ -125,7 +129,7 @@ def cover_lenet(out, dpi, cell=12, gap=2):
     left = fig.add_axes([0.04, 0.5 - side / 2, 0.4, side])
     right = fig.add_axes([0.56, 0.5 - side / 2, 0.4, side])
     left.imshow(digit, cmap=white, interpolation="bicubic", vmin=0, vmax=1)
-    right.imshow(grid, cmap=white, interpolation="nearest", vmin=0, vmax=1)
+    right.imshow(grid, cmap=amber, interpolation="nearest", vmin=0, vmax=1)
     for a in (left, right):
         a.set_facecolor("none")
         a.axis("off")
