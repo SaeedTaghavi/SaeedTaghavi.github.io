@@ -21,6 +21,8 @@ Nothing new. It redraws, at thumbnail scale:
   test image 30, a 3, stored in scripts/data/.
 * ml-intro-cover.png: three labelled clusters in the three plot colours
   among faint unlabelled points, split by dashed boundaries.
+* devops-cover.png: the DevOps loop as an infinity sign, development in
+  blue and operations in vermilion, with a dot for each of its eight phases.
 
 Usage
 -----
@@ -174,11 +176,38 @@ def cover_ml_intro(out, dpi, seed=2):
     plt.close(fig)
 
 
+def cover_devops(out, dpi):
+    # The DevOps loop of scripts/devops_loop.py: a figure eight travelled with
+    # t decreasing, development on the left lobe and operations on the right,
+    # with a dot for each of the eight phases.
+    t_dev = np.linspace(2 * np.pi, np.pi, 300)
+    t_ops = np.linspace(np.pi, 0, 300)
+    phases = np.array([1.9, 1.62, 1.38, 1.1, 0.9, 0.62, 0.38, 0.1]) * np.pi
+
+    def lemniscate(t):
+        return 1.85 * np.sin(t), 1.9 * np.sin(t) * np.cos(t)
+
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+    for t, colour in ((t_dev, SKY), (t_ops, LIGHT)):
+        ax.plot(*lemniscate(t), color=colour, lw=4.5, solid_capstyle="round")
+    for t in phases:
+        x, y = lemniscate(t)
+        colour = SKY if t > np.pi else LIGHT
+        ax.scatter(x, y, s=70, color=PETROL_DEEP, edgecolors=colour, linewidths=2.2, zorder=3)
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.65, 1.65)
+    ax.invert_yaxis()
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
     "lenet": ("lenet-web-app-cover.png", cover_lenet),
     "ml-intro": ("ml-intro-cover.png", cover_ml_intro),
+    "devops": ("devops-cover.png", cover_devops),
 }
 
 
