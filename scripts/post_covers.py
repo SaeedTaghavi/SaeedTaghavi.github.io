@@ -19,6 +19,8 @@ Nothing new. It redraws, at thumbnail scale:
 * lenet-web-app-cover.png: one MNIST test digit, smooth on the left and as the
   28 x 28 grid of pixels that LeNet-5 receives on the right. The digit is
   test image 30, a 3, stored in scripts/data/.
+* ml-intro-cover.png: three labelled clusters in the three plot colours
+  among faint unlabelled points, split by dashed boundaries.
 
 Usage
 -----
@@ -148,10 +150,35 @@ def cover_lenet(out, dpi, cell=12, gap=2):
     plt.close(fig)
 
 
+def cover_ml_intro(out, dpi, seed=2):
+    # Three labelled clusters in the three plot colours, a cloud of grey
+    # unlabelled points around them, and the boundaries a learner would draw.
+    rng = np.random.default_rng(seed)
+    centres = [(-1.0, 0.55), (1.0, 0.55), (0.0, -0.85)]
+    colours = [LIGHT, SKY, AMBER]
+
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+    grey = rng.uniform((-2.2, -1.6), (2.2, 1.6), size=(160, 2))
+    ax.scatter(grey[:, 0], grey[:, 1], s=7, color="white", alpha=0.25, linewidths=0)
+    for (cx, cy), colour in zip(centres, colours):
+        pts = rng.normal((cx, cy), 0.28, size=(45, 2))
+        ax.scatter(pts[:, 0], pts[:, 1], s=16, color=colour, alpha=0.95, linewidths=0)
+    dash = (0, (3, 2))
+    ax.plot([0.0, 0.0], [1.6, -0.05], color="white", alpha=0.55, lw=1.4, ls=dash)
+    ax.plot([-2.2, 0.0], [-0.55, -0.05], color="white", alpha=0.55, lw=1.4, ls=dash)
+    ax.plot([0.0, 2.2], [-0.05, -0.55], color="white", alpha=0.55, lw=1.4, ls=dash)
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.6, 1.6)
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
     "lenet": ("lenet-web-app-cover.png", cover_lenet),
+    "ml-intro": ("ml-intro-cover.png", cover_ml_intro),
 }
 
 

@@ -1041,6 +1041,14 @@ body > div[style*="position: fixed"] {
   height: auto;
   display: block;
 }
+/* A diagram included inline in a post: full width up to a readable size. */
+.md-typeset figure .st-figure-svg {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .md-typeset .st-theme h2 {
   margin: 0.3rem 0 0.6rem;
   font-size: 1.25rem;
