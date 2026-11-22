@@ -45,7 +45,7 @@
   group: Engineering projects
   home: true
   url: ""
-  link_label: GitHub
+  link_label: Soon
   description: PyTorch DDP jobs on a kind cluster, scheduled by the Kubeflow Training Operator and launched from a FastAPI front end.
   tags: [Kubernetes, Kubeflow, PyTorch DDP]
 
