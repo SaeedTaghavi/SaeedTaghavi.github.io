@@ -52,7 +52,7 @@ every tag under **Filters**, and picking one narrows the results to the pages
 with that tag. A tag applies to the whole page, so each of its sections shows
 up under the filter too. Keep to these names so the list stays short:
 
-Spiking networks, Phase oscillators, Synchrony, Plasticity, Brain stimulation, Stochastic dynamics, EEG, Machine learning, Information theory, Numerical methods, Astrophysics, Python, NEST, PyTorch, Docker, Kubernetes, Teaching.
+Spiking networks, Phase oscillators, Synchrony, Plasticity, Brain stimulation, Stochastic dynamics, EEG, Machine learning, Information theory, Numerical methods, Astrophysics, Python, NEST, PyTorch, Docker, Kubernetes, DevOps, CI/CD, Testing, Series, Teaching.
 
 Home, the CV and the Blog index carry no tags, because they cover everything.
 
@@ -86,6 +86,13 @@ The Blog page lists each post with its date, reading time, title, topics,
 `description` and `cover`, a 4:3 picture in `docs/writing/posts/img/` shown on
 the right. A post without
 `cover` takes the full width.
+
+To hide a post while it is unfinished, add `draft: true` at the top of its
+front matter. `make local` still shows it, so it can be written and previewed,
+but `make build`, `make push` and the deploy leave it out entirely: no page, no
+entry on the Blog page, in search or in the sitemap. Delete the line to publish
+it. A published post must not link to a draft: the strict build counts the link
+as an error and the deploy fails.
 
 Keep the scripts that draw a post's figures and covers in `scripts/`. They
 need a few extra packages that the site build does not:

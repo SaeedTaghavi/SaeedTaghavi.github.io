@@ -23,6 +23,8 @@ Nothing new. It redraws, at thumbnail scale:
   among faint unlabelled points, split by dashed boundaries.
 * devops-cover.png: the DevOps loop as an infinity sign, development in
   blue and operations in vermilion, with a dot for each of its eight phases.
+* devops-voting-cover.png: the five parts of the voting app as boxes along
+  the path a vote takes, services in blue and data stores in amber.
 
 Usage
 -----
@@ -202,12 +204,35 @@ def cover_devops(out, dpi):
     plt.close(fig)
 
 
+def cover_devops_voting(out, dpi):
+    # The voting app as a path of five nodes, the same Z as in
+    # includes/voting-app.svg: vote, redis, worker on top, then postgres and
+    # result below. Services in sky blue, data stores in amber.
+    nodes = [(-1.3, 0.55, SKY), (0.0, 0.55, AMBER), (1.3, 0.55, SKY), (0.0, -0.55, AMBER), (-1.3, -0.55, SKY)]
+    route = [(-1.3, 0.55), (0.0, 0.55), (1.3, 0.55), (1.3, -0.55), (0.0, -0.55), (-1.3, -0.55)]
+
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+    xs, ys = zip(*route)
+    ax.plot(xs, ys, color="white", alpha=0.45, lw=2.2, ls=(0, (3, 2)), zorder=1)
+    for x, y, colour in nodes:
+        ax.add_patch(
+            plt.Rectangle((x - 0.42, y - 0.24), 0.84, 0.48, facecolor=PETROL_DEEP, edgecolor=colour, lw=3, zorder=2)
+        )
+        ax.add_patch(plt.Rectangle((x - 0.42, y - 0.24), 0.84, 0.48, facecolor=colour, alpha=0.18, lw=0, zorder=3))
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.65, 1.65)
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
     "lenet": ("lenet-web-app-cover.png", cover_lenet),
     "ml-intro": ("ml-intro-cover.png", cover_ml_intro),
     "devops": ("devops-cover.png", cover_devops),
+    "devops-voting": ("devops-voting-cover.png", cover_devops_voting),
 }
 
 
