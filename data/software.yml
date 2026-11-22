@@ -48,3 +48,10 @@
   link_label: GitHub
   description: PyTorch DDP jobs on a kind cluster, scheduled by the Kubeflow Training Operator and launched from a FastAPI front end.
   tags: [Kubernetes, Kubeflow, PyTorch DDP]
+
+- name: ai-projects
+  group: Engineering projects
+  url: https://github.com/SaeedTaghavi/ai-projects
+  link_label: GitHub
+  description: Open-weight language models on one GPU. A private chat stack with Ollama, Open WebUI and nginx, and a lab where local models query Metabase through its MCP server over OAuth.
+  tags: [Ollama, MCP, Docker, nginx]
