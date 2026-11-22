@@ -45,9 +45,9 @@ from euler_maruyama_sho import euler_maruyama_sho
 
 PETROL = "#1d4e6b"
 PETROL_DEEP = "#0f2e42"
-LIGHT = "#ff7a52"
+LIGHT = "#f26a3d"
 SKY = "#8cc3e0"
-AMBER = "#f2b85b"
+AMBER = "#ffd770"
 OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "writing" / "posts" / "img"
 DIGIT = Path(__file__).resolve().parent / "data" / "mnist-test-00030.png"
 SIZE = (4.0, 3.0)  # 4:3, the aspect the Blog list crops to

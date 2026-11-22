@@ -42,12 +42,12 @@ from sklearn.tree import DecisionTreeClassifier
 
 INK = "#13212b"
 MUTED = "#a3b1ba"
-ACCENT = "#e4572e"
+ACCENT = "#cf3e24"
 # Same roles as the site figures: blue and vermilion for the two classes,
 # with pale tints of the same colours for the regions a model assigns.
-BLUE = "#2878b5"
-BLUE_TINT = "#dbe8f4"
-ACCENT_TINT = "#fbe0d8"
+BLUE = "#1a5188"
+BLUE_TINT = "#dde5ed"
+ACCENT_TINT = "#f8e2de"
 DEFAULT_OUT = (
     Path(__file__).resolve().parents[1]
     / "docs"

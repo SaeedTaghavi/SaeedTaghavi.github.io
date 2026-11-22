@@ -37,11 +37,12 @@ import numpy as np
 
 INK = "#13212b"
 MUTED = "#a3b1ba"
-ACCENT = "#e4572e"
+ACCENT = "#cf3e24"
 # Same roles as the site figures: grey for reference, blue for simulated or
 # estimated data, vermilion for theory, amber for a secondary series.
-BLUE = "#2878b5"
-AMBER = "#e9a23b"
+BLUE = "#1a5188"
+AMBER = "#efb93a"
+AMBER_EDGE = "#a87412"  # amber marks need a darker edge on white
 DEFAULT_OUT = (
     Path(__file__).resolve().parents[1]
     / "docs"

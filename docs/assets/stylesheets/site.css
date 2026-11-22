@@ -15,9 +15,12 @@
   --st-highlight: #c2410c;
   /* Plot categories: same meaning in every figure. Distinct in lightness as
      well as hue, so they stay apart for colour-blind readers. */
-  --st-c1: #e4572e;
-  --st-c2: #2878b5;
-  --st-c3: #e9a23b;
+  --st-c1: #cf3e24;
+  --st-c2: #1a5188;
+  --st-c3: #efb93a;
+  /* Amber is too light for thin lines on a light page (1.8:1), so amber
+     marks get this darker edge (4.1:1). See CLAUDE.md. */
+  --st-c3-edge: #a87412;
   --st-mono: var(--md-code-font-family, "IBM Plex Mono", ui-monospace, monospace);
 }
 
@@ -31,9 +34,10 @@
   --st-accent: #8cc3e0;
   --st-accent-dark: #8cc3e0;
   --st-highlight: #fb923c;
-  --st-c1: #ff7a52;
-  --st-c2: #5aa9e6;
-  --st-c3: #f2b85b;
+  --st-c1: #f26a3d;
+  --st-c2: #6cb6f0;
+  --st-c3: #ffd770;
+  --st-c3-edge: #ffd770;
 }
 
 /* Map the tokens onto Material's own variables. */
