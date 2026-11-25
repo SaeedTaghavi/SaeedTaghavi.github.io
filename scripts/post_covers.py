@@ -25,6 +25,9 @@ Nothing new. It redraws, at thumbnail scale:
   blue and operations in vermilion, with a dot for each of its eight phases.
 * devops-voting-cover.png: the five parts of the voting app as boxes along
   the path a vote takes, services in blue and data stores in amber.
+* ticket-routing-cover.png: a stack of tickets on the left, each drawn as a
+  card with lines of text, routed by curved arrows into three queues on the
+  right, in the three plot colours.
 
 Usage
 -----
@@ -226,6 +229,40 @@ def cover_devops_voting(out, dpi):
     plt.close(fig)
 
 
+def cover_ticket_routing(out, dpi):
+    # Tickets on the left, as cards with lines of text, and three queues on
+    # the right in the three plot colours. Each ticket is joined to the queue
+    # it is routed to.
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+    queues = [(1.45, 0.95, LIGHT), (1.45, 0.0, SKY), (1.45, -0.95, AMBER)]
+    tickets = [(-1.35, y) for y in (1.05, 0.35, -0.35, -1.05)]
+    routes = [0, 1, 2, 1]
+    for (tx, ty), q in zip(tickets, routes):
+        qx, qy, colour = queues[q]
+        ax.add_patch(
+            FancyArrowPatch(
+                (tx + 0.5, ty), (qx - 0.42, qy), connectionstyle="arc3,rad=-0.15",
+                arrowstyle="-|>", mutation_scale=12, color=colour, lw=2, alpha=0.9, zorder=1,
+            )
+        )
+    for tx, ty in tickets:
+        ax.add_patch(
+            plt.Rectangle((tx - 0.5, ty - 0.24), 1.0, 0.48, facecolor="white", alpha=0.92, lw=0, zorder=2)
+        )
+        for k, w in enumerate((0.75, 0.6, 0.68)):
+            ax.plot([tx - 0.4, tx - 0.4 + w], [ty + 0.11 - 0.11 * k] * 2, color=PETROL, lw=1.6, alpha=0.6, zorder=3)
+    for qx, qy, colour in queues:
+        ax.add_patch(
+            plt.Rectangle((qx - 0.4, qy - 0.3), 0.8, 0.6, facecolor=PETROL_DEEP, edgecolor=colour, lw=3, zorder=2)
+        )
+        ax.add_patch(plt.Rectangle((qx - 0.4, qy - 0.3), 0.8, 0.6, facecolor=colour, alpha=0.22, lw=0, zorder=3))
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.65, 1.65)
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
@@ -233,6 +270,7 @@ COVERS = {
     "ml-intro": ("ml-intro-cover.png", cover_ml_intro),
     "devops": ("devops-cover.png", cover_devops),
     "devops-voting": ("devops-voting-cover.png", cover_devops_voting),
+    "ticket-routing": ("ticket-routing-cover.png", cover_ticket_routing),
 }
 
 
