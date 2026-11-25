@@ -1,7 +1,6 @@
 ---
-draft: true
 date:
-  created: 2026-11-25
+  created: 2026-11-26
 categories:
   - Machine learning
 slug: llm-fine-tuning-ticket-routing
