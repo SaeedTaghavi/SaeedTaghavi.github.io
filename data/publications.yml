@@ -13,6 +13,7 @@
   summary: STDP prunes inter-layer connections with distributed conduction delays and keeps those compatible with propagating activity.
   links:
     - {label: DOI, url: "https://doi.org/10.1523/JNEUROSCI.0103-26.2026"}
+    - {label: Code, url: "https://github.com/SaeedTaghavi/Resonance-STDP_AliGhadiri"}
 
 - year: 2026
   type: Journal
@@ -23,7 +24,7 @@
   summary: Inhibitory synaptic timescales drive transitions between oscillatory regimes in recurrent E–I networks.
   links:
     - {label: DOI, url: "https://doi.org/10.1103/zmn7-7kf6"}
-    - {label: Code, url: "https://github.com/siamakkheiri/inhibitory-timescale-transitions-regime"}
+    - {label: Code, url: "https://github.com/SaeedTaghavi/kheiri-et-al-2026"}
 
 - year: 2025
   type: Journal
