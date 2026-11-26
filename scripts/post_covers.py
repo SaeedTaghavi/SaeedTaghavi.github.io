@@ -28,6 +28,12 @@ Nothing new. It redraws, at thumbnail scale:
 * ticket-routing-cover.png: a stack of tickets on the left, each drawn as a
   card with lines of text, routed by curved arrows into three queues on the
   right, in the three plot colours.
+* local-llm-stack-cover.png: a laptop and a phone on the left, joined
+  through one vermilion gate (nginx, the only open port) to a chat window and
+  a GPU chip inside a dashed box (the Docker network nothing outside reaches).
+* local-llms-metabase-mcp-cover.png: a chat bubble (the model's client) on
+  the left, joined through a plug to a hub (the MCP server), which fans out to
+  two tools in sky blue and a database in amber.
 
 Usage
 -----
@@ -263,6 +269,122 @@ def cover_ticket_routing(out, dpi):
     plt.close(fig)
 
 
+def _chip(ax, x, y, half, colour, pins=4):
+    """A square chip with pins on all four sides, centred at (x, y)."""
+    for k in range(pins):
+        p = -half + (k + 0.5) * 2 * half / pins
+        for (x0, y0, x1, y1) in (
+            (x + p, y + half, x + p, y + half + 0.13),
+            (x + p, y - half, x + p, y - half - 0.13),
+            (x + half, y + p, x + half + 0.13, y + p),
+            (x - half, y + p, x - half - 0.13, y + p),
+        ):
+            ax.plot([x0, x1], [y0, y1], color=colour, lw=2.2, solid_capstyle="round", zorder=2)
+    ax.add_patch(plt.Rectangle((x - half, y - half), 2 * half, 2 * half, facecolor=PETROL_DEEP, edgecolor=colour, lw=3, zorder=3))
+    ax.add_patch(plt.Rectangle((x - half, y - half), 2 * half, 2 * half, facecolor=colour, alpha=0.22, lw=0, zorder=4))
+    inner = 0.45 * half
+    ax.add_patch(plt.Rectangle((x - inner, y - inner), 2 * inner, 2 * inner, facecolor=colour, alpha=0.9, lw=0, zorder=5))
+
+
+def cover_local_llm_stack(out, dpi):
+    # Devices on the LAN on the left, one vermilion gate (nginx), then the chat
+    # window and the GPU chip inside the dashed Docker network.
+    from matplotlib.patches import FancyBboxPatch
+
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+    dash = (0, (3, 2))
+
+    # Docker network: everything behind the gate.
+    ax.add_patch(
+        FancyBboxPatch((-0.35, -1.25), 2.5, 2.5, boxstyle="round,pad=0,rounding_size=0.12",
+                       facecolor="none", edgecolor="white", alpha=0.45, lw=1.6, ls=dash, zorder=1)
+    )
+    # Laptop: screen and base. Phone: a tall rounded rectangle.
+    ax.add_patch(FancyBboxPatch((-2.05, 0.35), 0.85, 0.58, boxstyle="round,pad=0,rounding_size=0.05",
+                                facecolor="none", edgecolor="white", lw=2.4, zorder=3))
+    ax.plot([-2.18, -1.07], [0.3, 0.3], color="white", lw=3, solid_capstyle="round", zorder=3)
+    ax.add_patch(FancyBboxPatch((-1.88, -1.05), 0.45, 0.78, boxstyle="round,pad=0,rounding_size=0.07",
+                                facecolor="none", edgecolor="white", lw=2.4, zorder=3))
+    # Both devices reach the single gate.
+    for (x0, y0) in ((-1.1, 0.62), (-1.38, -0.66)):
+        ax.add_patch(FancyArrowPatch((x0, y0), (-0.72, 0.0), connectionstyle="arc3,rad=0.0",
+                                     arrowstyle="-|>", mutation_scale=11, color="white", alpha=0.7, lw=1.8, zorder=2))
+    # The gate: nginx, the only published port.
+    ax.add_patch(FancyBboxPatch((-0.68, -0.62), 0.22, 1.24, boxstyle="round,pad=0,rounding_size=0.06",
+                                facecolor=LIGHT, edgecolor="none", zorder=4))
+    ax.add_patch(FancyArrowPatch((-0.44, 0.0), (-0.12, 0.0), arrowstyle="-|>", mutation_scale=11,
+                                 color=LIGHT, lw=2.2, zorder=4))
+    # Chat window (Open WebUI) with two speech bubbles.
+    ax.add_patch(FancyBboxPatch((-0.08, -0.62), 1.05, 1.24, boxstyle="round,pad=0,rounding_size=0.08",
+                                facecolor=PETROL_DEEP, edgecolor=SKY, lw=3, zorder=3))
+    ax.add_patch(FancyBboxPatch((0.04, 0.12), 0.62, 0.3, boxstyle="round,pad=0,rounding_size=0.08",
+                                facecolor=SKY, alpha=0.9, edgecolor="none", zorder=4))
+    ax.add_patch(FancyBboxPatch((0.27, -0.42), 0.58, 0.42, boxstyle="round,pad=0,rounding_size=0.08",
+                                facecolor="white", alpha=0.85, edgecolor="none", zorder=4))
+    for k, w in enumerate((0.42, 0.32, 0.38)):
+        ax.plot([0.35, 0.35 + w], [-0.1 - 0.1 * k] * 2, color=PETROL, lw=1.4, alpha=0.7, zorder=5)
+    # Model on the GPU.
+    ax.plot([0.99, 1.19], [0.0, 0.0], color="white", alpha=0.7, lw=2.4, solid_capstyle="round", zorder=2)
+    _chip(ax, 1.62, 0.0, 0.3, AMBER)
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.65, 1.65)
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
+def cover_local_llms_metabase_mcp(out, dpi):
+    # A chat bubble (the model's client) plugged into a hub (the MCP server),
+    # which fans out to two tools and a database.
+    from matplotlib.patches import Ellipse, FancyBboxPatch, Polygon
+
+    fig = plt.figure(figsize=SIZE)
+    ax = banner_axes(fig)
+
+    # Chat bubble with a tail and three dots.
+    ax.add_patch(FancyBboxPatch((-2.0, -0.38), 1.0, 0.76, boxstyle="round,pad=0,rounding_size=0.18",
+                                facecolor=LIGHT, edgecolor="none", zorder=3))
+    ax.add_patch(Polygon([(-1.78, -0.36), (-1.9, -0.62), (-1.56, -0.36)], closed=True,
+                         facecolor=LIGHT, edgecolor="none", zorder=3))
+    for x in (-1.72, -1.5, -1.28):
+        ax.scatter(x, 0.0, s=42, color="white", zorder=4, linewidths=0)
+
+    # Plug: a socket on the bubble, two prongs on the hub side.
+    ax.plot([-1.0, -0.62], [0, 0], color="white", lw=3, solid_capstyle="round", zorder=2)
+    ax.add_patch(plt.Rectangle((-0.64, -0.17), 0.18, 0.34, facecolor="white", lw=0, zorder=3))
+    for dy in (0.08, -0.08):
+        ax.plot([-0.46, -0.32], [dy, dy], color="white", lw=2.4, solid_capstyle="butt", zorder=3)
+    ax.plot([-0.26, -0.04], [0, 0], color="white", lw=3, alpha=0.8, solid_capstyle="round", zorder=2)
+
+    # Hub: the MCP server.
+    ax.scatter(0.25, 0.0, s=1500, color=PETROL_DEEP, edgecolors="white", linewidths=3, zorder=4)
+    ax.scatter(0.25, 0.0, s=260, color="white", zorder=5, linewidths=0)
+
+    # Spokes to two tools (sky) and a database (amber).
+    targets = [(1.55, 0.95, SKY), (1.55, 0.0, AMBER), (1.55, -0.95, SKY)]
+    for tx, ty, colour in targets:
+        ax.add_patch(FancyArrowPatch((0.5, 0.0), (tx - 0.36, ty), connectionstyle="arc3,rad=-0.12",
+                                     arrowstyle="<|-|>", mutation_scale=10, color=colour, lw=2, alpha=0.9, zorder=2))
+    for tx, ty, colour in (targets[0], targets[2]):
+        ax.add_patch(FancyBboxPatch((tx - 0.34, ty - 0.24), 0.68, 0.48, boxstyle="round,pad=0,rounding_size=0.06",
+                                    facecolor=PETROL_DEEP, edgecolor=colour, lw=3, zorder=3))
+        ax.add_patch(FancyBboxPatch((tx - 0.34, ty - 0.24), 0.68, 0.48, boxstyle="round,pad=0,rounding_size=0.06",
+                                    facecolor=colour, alpha=0.22, edgecolor="none", zorder=4))
+    # Database cylinder.
+    dx, dy = targets[1][:2]
+    w, h, e = 0.62, 0.5, 0.16
+    ax.add_patch(plt.Rectangle((dx - w / 2, dy - h / 2), w, h, facecolor=PETROL_DEEP, lw=0, zorder=3))
+    ax.add_patch(plt.Rectangle((dx - w / 2, dy - h / 2), w, h, facecolor=AMBER, alpha=0.22, lw=0, zorder=4))
+    ax.plot([dx - w / 2] * 2, [dy - h / 2, dy + h / 2], color=AMBER, lw=3, zorder=5)
+    ax.plot([dx + w / 2] * 2, [dy - h / 2, dy + h / 2], color=AMBER, lw=3, zorder=5)
+    ax.add_patch(Ellipse((dx, dy - h / 2), w, e, facecolor=PETROL_DEEP, edgecolor=AMBER, lw=3, zorder=4))
+    ax.add_patch(Ellipse((dx, dy + h / 2), w, e, facecolor=AMBER, edgecolor=AMBER, lw=3, zorder=6))
+    ax.set_xlim(-2.2, 2.2)
+    ax.set_ylim(-1.65, 1.65)
+    fig.savefig(out, dpi=dpi)
+    plt.close(fig)
+
+
 COVERS = {
     "euler": ("euler-maruyama-cover.png", cover_euler_maruyama),
     "infomeasure": ("infomeasure-cover.png", cover_infomeasure),
@@ -271,6 +393,8 @@ COVERS = {
     "devops": ("devops-cover.png", cover_devops),
     "devops-voting": ("devops-voting-cover.png", cover_devops_voting),
     "ticket-routing": ("ticket-routing-cover.png", cover_ticket_routing),
+    "local-llm-stack": ("local-llm-stack-cover.png", cover_local_llm_stack),
+    "mcp-metabase": ("local-llms-metabase-mcp-cover.png", cover_local_llms_metabase_mcp),
 }
 
 

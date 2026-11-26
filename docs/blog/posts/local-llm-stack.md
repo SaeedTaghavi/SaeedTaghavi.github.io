@@ -5,6 +5,7 @@ categories:
   - Engineering
 slug: local-llm-stack
 description: A private ChatGPT-style setup on one machine. Ollama runs an open-weight model on the GPU, Open WebUI gives it a chat interface, and nginx is the only door in. Then a tour of the open models people use for coding, and which of them fit on a 12 GB GPU.
+cover: img/local-llm-stack-cover.png
 tags:
   - LLM
   - Ollama
