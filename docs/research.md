@@ -58,7 +58,7 @@ tags:
 <p class="st-kicker">Theme 04</p>
 <h2>Noise as a resource</h2>
 <p>Noise can help a neuron detect a weak signal. I study stochastic resonance in Hodgkin-Huxley neurons and networks with delayed feedback, comparing six circuit motifs from a single neuron to a balanced E–I network.</p>
-<p class="st-links"><a href="../writing/euler-maruyama-noisy-harmonic-oscillator/">Notes on simulating noisy systems</a></p>
+<p class="st-links"><a href="../blog/euler-maruyama-noisy-harmonic-oscillator/">Notes on simulating noisy systems</a></p>
 </div>
 </section>
 

@@ -51,7 +51,7 @@ PETROL_DEEP = "#0f2e42"
 LIGHT = "#f26a3d"
 SKY = "#8cc3e0"
 AMBER = "#ffd770"
-OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "writing" / "posts" / "img"
+OUT_DIR = Path(__file__).resolve().parents[1] / "docs" / "blog" / "posts" / "img"
 DIGIT = Path(__file__).resolve().parent / "data" / "mnist-test-00030.png"
 SIZE = (4.0, 3.0)  # 4:3, the aspect the Blog list crops to
 

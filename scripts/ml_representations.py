@@ -51,7 +51,7 @@ ACCENT_TINT = "#f8e2de"
 DEFAULT_OUT = (
     Path(__file__).resolve().parents[1]
     / "docs"
-    / "writing"
+    / "blog"
     / "posts"
     / "img"
     / "ml-representations.png"

@@ -58,7 +58,7 @@ Home, the CV and the Blog index carry no tags, because they cover everything.
 
 ## Write a blog post
 
-Create `docs/writing/posts/<name>.md`:
+Create `docs/blog/posts/<name>.md`:
 
 ```markdown
 ---
@@ -83,7 +83,7 @@ The rest of the post. Inline maths $x^2$, display maths $$...$$.
 ```
 
 The Blog page lists each post with its date, reading time, title, topics,
-`description` and `cover`, a 4:3 picture in `docs/writing/posts/img/` shown on
+`description` and `cover`, a 4:3 picture in `docs/blog/posts/img/` shown on
 the right. A post without
 `cover` takes the full width.
 
@@ -108,7 +108,9 @@ python scripts/post_covers.py           # thumbnails for the Blog page
 
 1. The site lives in `SaeedTaghavi/saeedtaghavi.github.io`, on the branch `master`. The earlier Jekyll site is kept on the branch `jekyll-site`.
 2. In the repository, **Settings → Pages → Source** is set to **GitHub Actions**.
-3. Every push to `master` runs `zensical build --strict` and publishes to <https://saeedtaghavi.github.io/>. The workflow also accepts `main`, in case the branch is renamed.
+3. Every push to `master` runs `zensical build --strict` and publishes to <https://saeedtaghavi.xyz/>. The workflow also accepts `main`, in case the branch is renamed.
+4. The custom domain `saeedtaghavi.xyz` is set in **Settings → Pages → Custom domain**, with **Enforce HTTPS** on. Its DNS is on Cloudflare: four A and four AAAA records for the apex pointing at GitHub Pages, and a CNAME `www` → `saeedtaghavi.github.io`, all **DNS only** (grey cloud). `saeedtaghavi.github.io` and `www` redirect to it.
+5. The blog moved from `/writing/` to `/blog/` in November 2026. `scripts/blog_redirects.py` writes the redirect pages in `docs/writing/` that keep the old links working.
 
 Zensical has no `gh-deploy` command, so the site is published only through this workflow.
 

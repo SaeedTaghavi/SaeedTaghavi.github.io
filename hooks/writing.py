@@ -6,12 +6,12 @@ Motivation
 The Blog list, overrides/partials/post.html, shows each post's title and
 cover picture. Under Material for MkDocs, an excerpt only learns its title
 once the post has been rendered, which can be after the list, and the blog
-plugin moves images out of writing/posts/, so the cover path in the front
+plugin moves images out of blog/posts/, so the cover path in the front
 matter does not point at the published file. This hook resolves both from
 the post's own Markdown file and stores them in the post's metadata, where
 the template reads them. The template does not depend on this hook: Zensical
 ignores MkDocs hooks, and there the template falls back to `post.title` and
-to the cover path under writing/.
+to the cover path under blog/.
 
 What it measures
 ----------------
