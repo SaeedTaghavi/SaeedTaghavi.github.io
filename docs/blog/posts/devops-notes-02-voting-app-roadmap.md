@@ -5,7 +5,7 @@ date:
 categories:
   - Engineering
 slug: devops-notes-02-voting-app-roadmap
-description: Part 2 of the DevOps notes. One small app with five parts, one machine with no cloud, and the plan for the series, from Docker Compose and kind to GitLab CI, Prometheus, A/B tests and chaos engineering.
+description: "Part 2 of the DevOps notes: one five-part app on one machine with no cloud, and the plan from Docker Compose and kind to GitLab CI and chaos engineering."
 cover: img/devops-voting-cover.png
 tags:
   - DevOps

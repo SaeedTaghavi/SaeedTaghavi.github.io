@@ -4,7 +4,7 @@ date:
 categories:
   - Engineering
 slug: devops-notes-01-loop-and-testing
-description: First of a series of notes on DevOps. What it is and why it exists, the eight phases of its loop, CI/CD, culture and metrics, and where testing fits, from shift-left tests before a merge to shift-right experiments in production.
+description: "First of a series of notes on DevOps: its eight-phase loop, CI/CD, culture and metrics, and where testing fits, from shift-left to shift-right."
 cover: img/devops-cover.png
 tags:
   - DevOps

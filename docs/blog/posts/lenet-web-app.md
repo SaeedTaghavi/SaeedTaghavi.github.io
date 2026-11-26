@@ -5,7 +5,7 @@ categories:
   - Deep learning
   - Engineering
 slug: lenet-web-app
-description: A small web app that reads an uploaded handwritten digit with LeNet-5. Two Docker containers, one FastAPI endpoint, and a page that shows what the network actually sees.
+description: "A small web app that reads a handwritten digit with LeNet-5: two Docker containers, one FastAPI endpoint, and a page that shows what the network sees."
 cover: img/lenet-web-app-cover.png
 tags:
   - Machine learning

@@ -8,7 +8,7 @@ categories:
   - LLM
   - Fine-tuning
 slug: llm-fine-tuning-ticket-routing
-description: A first fine-tuning experiment on one 12 GB GPU. Qwen2.5-3B learns with QLoRA to route support tickets as JSON, and is measured against the same model untrained and a TF-IDF classifier, after a leak in the data is found and closed.
+description: "Fine-tuning Qwen2.5-3B with QLoRA on one 12 GB GPU to route support tickets as JSON, against the untrained model and TF-IDF, after closing a data leak."
 cover: img/ticket-routing-cover.png
 tags:
   - Machine learning

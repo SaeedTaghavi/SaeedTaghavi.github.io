@@ -4,7 +4,7 @@ date:
 categories:
   - Engineering
 slug: local-llms-metabase-mcp
-description: What the Model Context Protocol is and what it is used for, then a step-by-step build of a local lab. Metabase's built-in MCP server behind an nginx reverse proxy, queried through OAuth by small open-weight models running in Ollama and Open WebUI on one 12 GB GPU.
+description: "What the Model Context Protocol is, then a local lab: Metabase's MCP server behind nginx, queried over OAuth by small open models on a 12 GB GPU."
 cover: img/local-llms-metabase-mcp-cover.png
 tags:
   - MCP

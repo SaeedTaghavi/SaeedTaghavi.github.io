@@ -4,7 +4,7 @@ date:
 categories:
   - Machine learning
 slug: machine-learning-notes-01-introduction
-description: First of a series of notes on machine learning. The change of viewpoint, the kinds of learning, how a learning system is designed, and the three parts of every learning algorithm, with handwritten digits as the running example.
+description: "First of a series of notes on machine learning: the kinds of learning, how a learning system is designed, and the three parts of every learning algorithm."
 cover: img/ml-intro-cover.png
 tags:
   - Machine learning
