@@ -1,5 +1,6 @@
 ---
 title: Publications
+description: "Papers, theses and conference abstracts by Saeed Taghavi on neural synchrony, brain stimulation, plasticity and astrophysics, with DOIs and code."
 hide:
   - navigation
   - toc

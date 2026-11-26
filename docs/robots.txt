@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Old addresses of the blog; they only redirect to /blog/.
+Disallow: /writing/
+
+Sitemap: https://saeedtaghavi.xyz/sitemap.xml

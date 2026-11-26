@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "Saeed Taghavi, postdoc in computational neuroscience in Madrid: spiking networks, brain rhythms, machine learning, and the infrastructure that runs them."
 template: home.html
 hide:
   - navigation

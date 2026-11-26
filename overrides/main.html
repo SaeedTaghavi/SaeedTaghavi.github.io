@@ -1,8 +1,14 @@
 {#-
   Every page: replace Material's tab bar with the banner and the rounded
-  navigation bar from partials/st-header.html.
+  navigation bar from partials/st-header.html, and add the tags for link
+  previews and search engines from partials/st-seo.html.
 -#}
 {% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{% include "partials/st-seo.html" %}
+{% endblock %}
 
 {% block tabs %}{% endblock %}
 

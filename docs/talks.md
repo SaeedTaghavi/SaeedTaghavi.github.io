@@ -1,5 +1,6 @@
 ---
 title: Talks
+description: "Talks and recorded presentations by Saeed Taghavi on phase oscillators, synchrony, brain stimulation and astrophysics."
 hide:
   - navigation
   - toc

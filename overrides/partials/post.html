@@ -39,7 +39,7 @@
   </div>
   {% if cover %}
     <a class="st-post__cover" href="{{ post.url | url }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ cover | url }}" alt="" loading="lazy" width="1200" height="900">
+      <img src="{{ cover | url }}" alt="Cover picture: {{ (post.meta.st_list_title or post.title) | e }}" loading="lazy" width="1200" height="900">
     </a>
   {% endif %}
 </article>

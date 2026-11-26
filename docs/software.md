@@ -1,5 +1,6 @@
 ---
 title: Software
+description: "Research code, teaching material and engineering projects by Saeed Taghavi: NEST simulations, a PyTorch course, Kubernetes and local LLM projects."
 hide:
   - navigation
   - toc

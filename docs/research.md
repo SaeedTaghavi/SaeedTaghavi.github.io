@@ -1,5 +1,6 @@
 ---
 title: Research
+description: "How timing shapes computation in neural networks: synchrony, tACS entrainment, delay plasticity, phase oscillators, stochastic resonance and EEG."
 hide:
   - navigation
 tags:

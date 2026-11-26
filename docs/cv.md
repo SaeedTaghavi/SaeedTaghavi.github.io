@@ -1,5 +1,6 @@
 ---
 title: CV
+description: "CV of Saeed Taghavi: postdoctoral researcher in computational neuroscience with a PhD in physics and a background in production infrastructure."
 hide:
   - navigation
   - toc
